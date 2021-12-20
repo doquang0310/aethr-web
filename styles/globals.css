@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lilita One', cursive!important;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --clr-text-nor : #fff;
+    --clr-text-nor-hov : #FFE96C;
+
+}
+.have-cloud {
+    position: relative;
+}
+.have-cloud img.cloud-top-left {
+    position: absolute;
+    top: -24%;
+    left: -26%;
+}
+.have-cloud img.cloud-top-right {
+    position: absolute;
+    top: -24%;
+    right: -20%;
+}
+.have-cloud img.cloud-top-center {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+}
+.section-hero {
+    background-image: url('../public/images/BG\ banner\ 1.png');
+    height: 100vh;
+}
+.main-header {
+    background-image: url('../public/images/header.png');
+    min-height: 88px;
+    background-size: cover;
+    display: flex;
+    padding: 0px 40px;
+}
+
+.main-header .logo-pc {
+    position: relative;
+    min-width: 200px;
+}
+
+.main-header .logo-pc img {
+    position: absolute;
+    bottom: -10px;
+    width: 200px;
+}
+
+.main-header .main-nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.main-header .main-nav .item-nav {
+    padding: 0px 40px;
+    color: var(--clr-text-nor);
+    cursor: pointer;
+}
+
+.main-header .main-nav .item-nav:hover{
+    color: var(--clr-text-nor-hov);
+}
+
+.hero-show {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 88px);
+}
+
+.hero-show img.hero-center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+.hero-show img.hero-p1 {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    transform: translate(-0%, -50%) scale(1);
+    animation-name: hero-p1-show;
+    animation-duration: 2s;
+}
+
+.hero-show img.hero-p2 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    transform: translate(-0%, -50%) scale(0.8);
+}
+
+.hero-show img.hero-p3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.hero-show img.hero-p4 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    transform: translate(-0%, -50%) scale(0.8);
+}
+
+.hero-show img.hero-p5 {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    transform: translate(-0%, -50%) scale(0.8) scaleX(-1);
+}
+
+@keyframes hero-p1-show {
+    0%   {
+        top: 70%;
+        left: -30%;
+        opacity: 0;
+    }
+    100%  {
+        top: 70%;
+        left: 5%;
+        opacity: 1;
+        animation-name: up-down;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+}
+
+.section-eco {
+    background: rgb(0,125,192);
+    background: -moz-linear-gradient(180deg, rgba(0,125,192,1) 0%, rgba(2,101,160,1) 50%, rgba(9,34,64,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,125,192,1) 0%, rgba(2,101,160,1) 50%, rgba(9,34,64,1) 100%);
+    background: linear-gradient(180deg, rgba(0,125,192,1) 0%, rgba(2,101,160,1) 50%, rgba(9,34,64,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007dc0",endColorstr="#092240",GradientType=1);
+    padding-bottom: 50px;
+}
+
+.section-eco .card-1 {
+    background-image: url('../public/images/card1.png');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+.section-eco .card-2 {
+    background-image: url('../public/images/card2.png');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+.section-eco .card-3 {
+    background-image: url('../public/images/card3.png');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+.section-concept {
+    background: rgb(10,34,64);
+    background: -moz-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 36%, rgba(10,21,53,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 36%, rgba(10,21,53,1) 100%);
+    background: linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 36%, rgba(10,21,53,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a2240",endColorstr="#0a1535",GradientType=1);
+}
+.section-concept .container-trailer-game {
+    margin-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+    background: url('../public/images/video-frame.png') no-repeat 50%;
+    background-size: contain;
+}
+.section-concept .trailer-game {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.section-concept .show-trailer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+}
+
+.section-concept .show-trailer iframe {
+    width: 100%;
+    height: 100%;
+    padding: 40px 46px;
+}
+
+.section-concept .container-concept-game {
+    width: 100%;
+    margin: 0 auto;
+    background: url('../public/images/background-concept.png') no-repeat 50%;
+    background-size: contain;
+    margin-top: 120px;
+}
+.section-concept .concept-game {
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.section-concept .concept-game .show-concept {
+    display: flex;
+    justify-content: center;
+}
+
+.section-concept .concept-game .badge-concept {
+    width: 60%;
+    position: absolute;
+    top: -50px;
+    background-image: url('../public/images/label-concept.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 229px;
+    /* padding-top: 25px; */
+    padding: 50px 100px 0px;
+    text-align: center;
+}
+
+.section-concept .concept-game .badge-concept h2 {
+    font-size: 34px;
+    color: var(--clr-text-nor);
+    font-weight: normal;
+}
+
+.section-concept .concept-game .badge-concept p {
+    font-size: 18px;
+    color: var(--clr-text-nor);
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-concept .concept-game .content-concept {
+    position: absolute;
+    top: 180px;
+}
+
+.section-concept .concept-game .content-concept img.img-concept1 {
+    width: 270px;
+    height: auto;
+}
+
+.section-concept .concept-game .content-concept img.img-concept2 {
+    width: 274px;
+    height: auto;
+}
+
+.section-concept .concept-game .content-concept img.img-concept3 {
+    width: 383px;
+    height: auto;
+}
+.section-concept .concept-game span.name-concept {
+    font-family: 'Love Ya Like A Sister', cursive;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+    font-size: 34px;
+}
+.section-hero-concept {
+    background-image: url('../public/images/bg-bottom-concept.png');
+    padding-bottom: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+}
+
+.section-hero-concept::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('../public/images/May\ 3.png');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    /* z-index: 999; */
+    background-repeat: no-repeat;
+}
