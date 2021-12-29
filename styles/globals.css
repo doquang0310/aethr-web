@@ -25,6 +25,21 @@ a {
     --clr-text-nor-hov : #FFE96C;
 
 }
+.section .fp-tableCell {
+    vertical-align: inherit;
+}
+.cl-w {
+    color: white;
+}
+.wrap-badge-section {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+.badge-section{
+    width: 300px;
+    margin: 0 auto;
+}
 .have-cloud {
     position: relative;
 }
@@ -72,11 +87,12 @@ a {
 .main-header .main-nav {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     height: 60px;
+    width: 100%;
 }
 
 .main-header .main-nav .item-nav {
-    padding: 0px 40px;
     color: var(--clr-text-nor);
     cursor: pointer;
 }
@@ -157,7 +173,6 @@ a {
     background: -webkit-linear-gradient(180deg, rgba(0,125,192,1) 0%, rgba(2,101,160,1) 30%, rgba(10,34,64,1) 100%);
     background: linear-gradient(180deg, rgba(0,125,192,1) 0%, rgba(2,101,160,1) 30%, rgba(10,34,64,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007dc0",endColorstr="#0a2240",GradientType=1);
-    padding-bottom: 50px;
 }
 
 .section-eco .card-1 {
@@ -183,9 +198,9 @@ a {
 
 .section-concept {
     background: rgb(10,34,64);
-    background: -moz-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,1) 100%);
-    background: linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,1) 100%);
+    background: -moz-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,0.97) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,0.97) 100%);
+    background: linear-gradient(180deg, rgba(10,34,64,1) 0%, rgba(10,21,53,1) 30%, rgba(10,21,53,0.969) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a2240",endColorstr="#0a1535",GradientType=1);
 }
 .section-concept .container-trailer-game {
@@ -218,10 +233,9 @@ a {
 
 .section-concept .container-concept-game {
     width: 100%;
-    margin: 0 auto;
     background: url('../public/images/background-concept.png') no-repeat 50%;
-    background-size: contain;
-    margin-top: 120px;
+    background-size: cover;
+    flex:  0 0 60%;
 }
 .section-concept .concept-game {
     padding-top: 56.25%;
@@ -261,39 +275,42 @@ a {
 
 .section-concept .concept-game .content-concept {
     position: absolute;
-    top: 180px;
+    top: 20px;
+    padding: 0px 20px;
 }
 
 .section-concept .concept-game .content-concept img.img-concept1 {
-    width: 270px;
+    width: 30%;
     height: auto;
 }
 
 .section-concept .concept-game .content-concept img.img-concept2 {
-    width: 274px;
+    width: 30%;
     height: auto;
 }
 
 .section-concept .concept-game .content-concept img.img-concept3 {
-    width: 383px;
+    width: 40%;
     height: auto;
 }
 .section-concept .concept-game span.name-concept {
     font-family: 'Love Ya Like A Sister', cursive;
     position: absolute;
-    bottom: 120px;
-    right: 200px;
-    font-size: 34px;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    right: 5;
+    font-size: 20px;
+    
 }
 .section-hero-concept {
     background: linear-gradient(180deg, rgba(9,20,53,1) 0%, rgba(3,48,80,1) 100%, rgba(10,21,53,1) 100%);
     background-image: url('../public/images/bg-bottom-concept.png'),linear-gradient(180deg, rgba(9,20,53,1) 0%, rgba(3,48,80,1) 100%, rgba(10,21,53,1) 100%);
-    padding-bottom: 1000px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .section-hero-concept::before {
@@ -301,7 +318,7 @@ a {
     background-image: url('../public/images/May\ 3.png');
     position: absolute;
     bottom: 0px;
-    height: 600px;
+    height: 450px;
     width: 100%;
 }
 .section-hero-concept .info-hero-concept {
@@ -314,35 +331,67 @@ a {
     height: 160px;
 }
 
+.section-hero-concept .concept-hero {
+    background-image: url('../public/images/background-hero.png');
+    flex: 0 0 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.section-hero-concept .concept-hero img.detail-hero {
+    max-width: 80%;
+}
+
 .slick-heros {
     max-width: 850px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.slick-heros .slick-track {
+    height: 200px;
 }
 
 .slick-heros .slick-center .wrapper-one-hero {
-    height: 300px;
-    padding: 20px;
-    width: 300px!important;
 }
 .slick-heros .slick-center .wrapper-one-hero .image-slick-hero {
-    width: 280px;
+    width: 120px;
 }
 
 .slick-heros .wrapper-one-hero {
     height: 218px;
     padding: 20px;
-    width: 218px!important;
-    overflow: hidden;
+    width: 170px!important;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 1s;
 }
 .slick-heros .slick-center .one-hero {
-    background : #6c39c4;
+    background-image: url('../public/images/card-active.png');
+    background-size: contain;
     border: 3px solid #fefbd1;
     box-shadow: 10px 10px 5px 0px rgba(108,57,196,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(108,57,196,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(108,57,196,0.75);
+    animation: neon3 1.5s ease-in-out infinite alternate;
+    opacity: 1!important;
 }
+.slick-heros .slick-center .one-hero img {
+    opacity: 1;
+}
+@keyframes neon3 {
+    from {
+        box-shadow: 0 0 3px #fff, 0 0 7px #fff, 0 0 10px #fff, 0 0 13px #ffdd1b,
+        0 0 16px #ffdd1b, 0 0 16px #ffdd1b, 0 0 16px #ffdd1b, 0 0 16px #ffdd1b;
+    }
+    to {
+        box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #ffdd1b,
+        0 0 6px #ffdd1b, 0 0 7px #ffdd1b, 0 0 8px #ffdd1b, 0 0 9px #ffdd1b;
+    }
+  }
 .slick-heros .slick-slide > div {
     display: flex;
     justify-content: center;
@@ -352,14 +401,116 @@ a {
     display: flex!important;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
     border-radius: 7px;
-    background: #16396f;
-    height: 100%;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-image: url('../public/images/card-inactive.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90%;
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    transition: 1s;
+    opacity: 0.6;
+}
+.slick-heros .one-hero img {
+    opacity: 0;
+    transition: 1s;
+}
+.wrap-content-game-hero {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
 }
 .slick-heros .image-slick-hero {
+    width: 120px;
+}
+
+.section-gameplay {
+    padding-top: 20px;
+}
+
+.section-roadmap {
+    background-image: url('../public/images/bg-roadmap.png');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+.section-roadmap::before {
+    content: '';
+    background-image: url('../public/images/May\ 1.png');
+    height: 400px;
+    background-position: top;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+.section-roadmap .mid-road {
+    width: 88%;
+    border-top: 4px solid #FFE48D;
+    border-bottom: 3px solid #B77300;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.section-roadmap .top-road{
+    display: flex;
+    justify-content: space-between;
+}
+.section-roadmap .top-road .item {
+    text-align: center;
+    margin-bottom: -24px;
+}
+.section-roadmap .top-road .item .content-roadmap {
+    text-align: left;
+    min-height: 81px;
+}
+.section-roadmap .top-road .item .date-roadmap {
+    font-size: 23px;
+    color: #FFE092;
+    margin-top: -25px;
+    text-shadow: 5px 5px black;
+}
+.section-roadmap .top-road .item .content-roadmap p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px black;
+}
+
+.section-roadmap .bot-road {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-roadmap .bot-road .item {
+    text-align: center;
     width: 200px;
+}
+
+.section-roadmap .bot-road .item .date-roadmap {
+    font-size: 23px;
+    color: #FFE092;
+    margin-top: -25px;
+    text-shadow: 1px 1px black;
+}
+.section-roadmap .bot-road .item .content-roadmap p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0px;
+    text-shadow: 5px 5px black;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.section-roadmap .bot-road .wrap-icon-end {
+    display: flex;
+    justify-content: center;
+    transform: rotate(180deg);
+    margin-top: -22px;
 }
