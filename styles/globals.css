@@ -394,7 +394,7 @@ a {
 
 .section-hero-concept::before {
     content: ' ';
-    background-image: url('/images/May\ 3.png');
+    background-image: url('/images/cloudbig3.png');
     position: absolute;
     bottom: 0px;
     height: 450px;
@@ -513,7 +513,7 @@ a {
 }
 .section-roadmap::before {
     content: '';
-    background-image: url('/images/May\ 1.png');
+    background-image: url('/images/cloudbig1.png');
     height: 400px;
     background-position: top;
     position: absolute;
@@ -749,7 +749,7 @@ a {
 
 }
 .section-community::after {
-    background-image: url('/images/May\ 2.png');
+    background-image: url('/images/cloudbig2.png');
     background-position: 0px -200px;
     content: '';
     position: absolute;
