@@ -395,16 +395,16 @@ export default class FullpageWrapper extends React.Component {
                                                 <p className="title-item">BUY MYSTERY BOXES</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Marketplace Fees</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">P2E Incentives</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Treasury Fund</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Staking</p>
                                             </div>
                                         </div>
                                         <div className="wrap-center-box">
@@ -423,19 +423,19 @@ export default class FullpageWrapper extends React.Component {
                                         </div>
                                         <div className="right-box">
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Adventure</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">PVP</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Upgrade</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Tournament</p>
                                             </div>
                                             <div className="item">
-                                                <p className="title-item">BUY MYSTERY BOXES</p>
+                                                <p className="title-item">Shop In-game</p>
                                             </div>
                                         </div>
                                     </div>
@@ -567,52 +567,52 @@ export default class FullpageWrapper extends React.Component {
                                     </div>
                                     <div className="wrap-core-team">
                                         <div className="team-member">
-                                            <img src="/images/T1.png" alt="" />
+                                            <img src="/images/t1.png" alt="" />
                                             <p className="name">Do Van Huy</p>
                                             <p className="position">CEO</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T2.png" alt="" />
+                                            <img src="/images/t2.png" alt="" />
                                             <p className="name">Nguyen Tuan Minh</p>
                                             <p className="position">CTO</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T3.png" alt="" />
+                                            <img src="/images/t3.png" alt="" />
                                             <p className="name">Vu Dinh Hung</p>
                                             <p className="position">Data Analytics Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T4.png" alt="" />
+                                            <img src="/images/t4.png" alt="" />
                                             <p className="name">Tran Quang Tung</p>
                                             <p className="position">Backend Developer Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T5.png" alt="" />
+                                            <img src="/images/t5.png" alt="" />
                                             <p className="name">Do Dinh Quang</p>
                                             <p className="position"> Blockchain Developer Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T6.png" alt="" />
+                                            <img src="/images/t6.png" alt="" />
                                             <p className="name">Do Hai Ha</p>
                                             <p className="position">Frontend Developer Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T7.png" alt="" />
+                                            <img src="/images/t7.png" alt="" />
                                             <p className="name">Khuat Minh Son</p>
                                             <p className="position">3D Art Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T8.png" alt="" />
+                                            <img src="/images/t8.png" alt="" />
                                             <p className="name">Vu Thi Huyen</p>
                                             <p className="position">2D Art Lead</p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T9.png" alt="" />
+                                            <img src="/images/t9.png" alt="" />
                                             <p className="name">Nguyen Xuan Minh</p>
                                             <p className="position">Animation </p>
                                         </div>
                                         <div className="team-member">
-                                            <img src="/images/T10.png" alt="" />
+                                            <img src="/images/t10.png" alt="" />
                                             <p className="name">Nguyen Nhon Duy</p>
                                             <p className="position">Investor Relationship Director</p>
                                         </div>
