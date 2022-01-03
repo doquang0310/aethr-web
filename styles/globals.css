@@ -70,13 +70,13 @@ a {
     transform: translate(-50%, -50%) scale(0.7);
 }
 .section-hero {
-    background-image: url('../public/images/BG\ banner\ 1.png');
+    background-image: url('/images/BG\ banner\ 1.png');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .main-header {
-    /* background-image: url('../public/images/header.png'); */
+    /* background-image: url('/images/header.png'); */
     min-height: 88px;
     background-size: cover;
     display: flex;
@@ -178,7 +178,7 @@ a {
 }
 
 .section-eco {
-    background: url('../public/images/sec1\,5-bg\ \(2\).png');
+    background: url('/images/sec1\,5-bg\ \(2\).png');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 100px;
@@ -237,7 +237,7 @@ a {
 }
 
 .section-eco .card-1 {
-    background-image: url('../public/images/card1.png');
+    background-image: url('/images/card1.png');
     width: 100%;
     height: 473.5px;
     background-size: cover;
@@ -245,14 +245,14 @@ a {
 }
 
 .section-eco .card-2 {
-    background-image: url('../public/images/card2.png');
+    background-image: url('/images/card2.png');
     width: 100%;
     height: 50vh;
     background-size: cover;
 }
 
 .section-eco .card-3 {
-    background-image: url('../public/images/card3.png');
+    background-image: url('/images/card3.png');
     width: 100%;
     height: 50vh;
     background-size: cover;
@@ -269,7 +269,7 @@ a {
     margin-top: 100px;
     width: 100%;
     margin: 0 auto;
-    background: url('../public/images/video-frame.png') no-repeat 50%;
+    background: url('/images/video-frame.png') no-repeat 50%;
     background-size: contain;
 }
 .section-concept .trailer-game {
@@ -310,7 +310,7 @@ a {
 
 .section-concept .container-concept-game {
     width: 100%;
-    background: url('../public/images/background-concept.png') no-repeat 50%;
+    background: url('/images/background-concept.png') no-repeat 50%;
     background-size: cover;
     flex:  0 0 60%;
 }
@@ -329,7 +329,7 @@ a {
     width: 60%;
     position: absolute;
     top: -50px;
-    background-image: url('../public/images/label-concept.png');
+    background-image: url('/images/label-concept.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 229px;
@@ -384,7 +384,7 @@ a {
 }
 .section-hero-concept {
     background: linear-gradient(180deg, rgba(9,20,53,1) 0%, rgba(3,48,80,1) 100%, rgba(10,21,53,1) 100%);
-    background-image: url('../public/images/bg-bottom-concept.png'),linear-gradient(180deg, rgba(9,20,53,1) 0%, rgba(3,48,80,1) 100%, rgba(10,21,53,1) 100%);
+    background-image: url('/images/bg-bottom-concept.png'),linear-gradient(180deg, rgba(9,20,53,1) 0%, rgba(3,48,80,1) 100%, rgba(10,21,53,1) 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -394,7 +394,7 @@ a {
 
 .section-hero-concept::before {
     content: ' ';
-    background-image: url('../public/images/May\ 3.png');
+    background-image: url('/images/May\ 3.png');
     position: absolute;
     bottom: 0px;
     height: 450px;
@@ -411,7 +411,7 @@ a {
 }
 
 .section-hero-concept .concept-hero {
-    background-image: url('../public/images/background-hero.png');
+    background-image: url('/images/background-hero.png');
     flex: 0 0 35%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -449,7 +449,7 @@ a {
     transition: 1s;
 }
 .slick-heros .slick-center .one-hero {
-    background-image: url('../public/images/card-active.png');
+    background-image: url('/images/card-active.png');
     background-size: contain;
     border: 3px solid #fefbd1;
     box-shadow: 10px 10px 5px 0px rgba(108,57,196,0.75);
@@ -481,7 +481,7 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
-    background-image: url('../public/images/card-inactive.png');
+    background-image: url('/images/card-inactive.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 90%;
@@ -506,14 +506,14 @@ a {
 }
 
 .section-roadmap {
-    background-image: url('../public/images/bg-roadmap.png');
+    background-image: url('/images/bg-roadmap.png');
     background-size: cover;
     background-position: bottom;
     position: relative;
 }
 .section-roadmap::before {
     content: '';
-    background-image: url('../public/images/May\ 1.png');
+    background-image: url('/images/May\ 1.png');
     height: 400px;
     background-position: top;
     position: absolute;
@@ -582,7 +582,7 @@ a {
     background-color: #03294E;
 }
 .section-tokenomics .item {
-    background-image: url('../public/images/box-tokenomics.png');
+    background-image: url('/images/box-tokenomics.png');
     height: 121.54px;
     width: 220px;
     display: flex;
@@ -591,7 +591,7 @@ a {
     color: white;
 }
 .section-tokenomics .item-center {
-    background-image: url('../public/images/box-tokenomics2.png');
+    background-image: url('/images/box-tokenomics2.png');
     height: 121.54px;
     width: 220px;
     display: flex;
@@ -600,7 +600,7 @@ a {
     color: white;
 }
 .section-tokenomics .item-suply {
-    background-image: url('../public/images/box-tokenomics4.png');
+    background-image: url('/images/box-tokenomics4.png');
     height: 199px;
     width: 230px;
     display: flex;
@@ -687,7 +687,7 @@ a {
 }
 
 .section-core-team {
-    background-image: url('../public/images/bg-team.png');
+    background-image: url('/images/bg-team.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -419px;
@@ -729,7 +729,7 @@ a {
     text-shadow: 1px 3px black;
 }
 .section-community {
-    background-image: url('../public/images/bg-team.png');
+    background-image: url('/images/bg-team.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -737,7 +737,7 @@ a {
     padding-bottom: 200px;
 }
 .section-community .badge-community-custom {
-    background-image: url('../public/images/bg-text-community.png');
+    background-image: url('/images/bg-text-community.png');
     background-position: top center;
     background-repeat: no-repeat;
     width: 327px;
@@ -749,7 +749,7 @@ a {
 
 }
 .section-community::after {
-    background-image: url('../public/images/May\ 2.png');
+    background-image: url('/images/May\ 2.png');
     background-position: 0px -200px;
     content: '';
     position: absolute;
@@ -760,7 +760,7 @@ a {
     z-index: 2;
 }
 .section-community::before {
-    background-image: url('../public/images/bg-community.png');
+    background-image: url('/images/bg-community.png');
     background-position: -40px -100px;
     content: '';
     position: absolute;
@@ -785,7 +785,7 @@ a {
     justify-content: space-between;
 }
 .section-community .wrap-all-community .one-item {
-    background-image: url('../public/images/icon-community.png');
+    background-image: url('/images/icon-community.png');
     width: 234px;
     height: 222px;
     display: flex;
@@ -795,7 +795,7 @@ a {
 }
 
 .footer {
-    background: url('../public/images/bg-footer.png'),black;
+    background: url('/images/bg-footer.png'),black;
     padding: 30px 0px;
 }
 .footer .wrap-logo-footer p {
