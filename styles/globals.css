@@ -76,7 +76,7 @@ a {
     background-size: cover;
 }
 .main-header {
-    /* background-image: url('/images/header.png'); */
+    background-image: url('/images/header.png');
     min-height: 88px;
     background-size: cover;
     display: flex;
@@ -90,7 +90,7 @@ a {
 
 .main-header .logo-pc img {
     position: absolute;
-    /* bottom: -10px; */
+    bottom: -10px;
     width: 200px;
 }
 
