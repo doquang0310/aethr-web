@@ -147,7 +147,7 @@ export default class FullpageWrapper extends React.Component {
                                             <span className='item-nav'>Document</span>
                                         </div>
                                     </div>
-                                    <div className='hero-show'>
+                                    {/* <div className='hero-show'>
                                         <img src='/images/logo-banner.png' className='hero-center hero-section'></img>
                                         <img src='/images/pos1.png' className='hero-p1 hero-section'></img>
                                         <img src='/images/pos2.png' className='hero-p2 hero-section'></img>
@@ -155,7 +155,7 @@ export default class FullpageWrapper extends React.Component {
                                         <img src='/images/pos4.png' className='hero-p4 hero-section'></img>
                                         <img src='/images/pos5.png' className='hero-p5 hero-section'></img>
                                         
-                                    </div>
+                                    </div> */}
                                 </div>
                             </section>
                             <section className="section-eco section fp-auto-height">
