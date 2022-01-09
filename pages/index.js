@@ -125,6 +125,9 @@ export default class FullpageWrapper extends React.Component {
         return (
             <div id="fullpage-wrapper">
                 <section className='section-hero section' id="home">
+                    <video playsInline autoPlay loop muted>
+                        <source type="video/webm" src="/videos/banner.webm" />
+                    </video>
                     <Navbar expand="lg" fixed="top" className="main-header">
                         <Container>
                             <Navbar.Brand href="#">
@@ -137,8 +140,8 @@ export default class FullpageWrapper extends React.Component {
                                 <Nav.Link href="#token-allocation" className="item-nav">Token Allocation</Nav.Link>
                                 <Nav.Link href="#team" className="item-nav">Team</Nav.Link>
                                 <Nav.Link href="#roadmap" className="item-nav">Roadmap</Nav.Link>
-                                <Nav.Link href="#home" className="item-nav">Marketplace</Nav.Link>
-                                <Nav.Link href="#home" className="item-nav">Document</Nav.Link>
+                                <Nav.Link href="https://marketplace.aethr.world" className="item-nav">Marketplace</Nav.Link>
+                                <Nav.Link href="https://docs.aethr.world" className="item-nav">Document</Nav.Link>
                             </Nav>
                         </Container>
                     </Navbar>
@@ -611,19 +614,29 @@ export default class FullpageWrapper extends React.Component {
                     <div className="container">
                         <div className="wrap-all-community">
                             <div className="one-item">
-                                <img src="/images/play.png" alt="" />
+                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/play.png" alt="" />
+                                </a>
                             </div>
                             <div className="one-item">
-                                <img src="/images/tele.png" alt="" />
+                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/tele.png" alt="" />
+                                </a>
                             </div>
                             <div className="one-item">
-                                <img src="/images/flickr.png" alt="" />
+                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/flickr.png" alt="" />
+                                </a>
                             </div>
                             <div className="one-item">
-                                <img src="/images/youtube.png" alt="" />
+                                <a href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/youtube.png" alt="" />
+                                </a>
                             </div>
                             <div className="one-item">
-                                <img src="/images/twitter.png" alt="" />
+                                <a href="https://twitter.com/AethrWorld" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/twitter.png" alt="" />
+                                </a>
                             </div>
                         </div>
                     </div>                           
@@ -640,16 +653,16 @@ export default class FullpageWrapper extends React.Component {
                                 <img src="/images/3dot.png" alt="" />
                                 <a className="link-footer" href="#">White Paper</a>
                                 <a className="link-footer" href="#">News</a>
-                                <a className="link-footer" href="#">Document </a>
+                                <a className="link-footer" href="https://docs.aethr.world">Document </a>
                                 <a className="link-footer" href="#">Marketplace</a>
 
                             </div>
                             <div className="col-md-3">
                                 <h3 className="title-footer">Info </h3>
                                 <img src="/images/3dot.png" alt="" />
-                                <a className="link-footer" href="#">Terms of Use</a>
-                                <a className="link-footer" href="#">Privacy Policy</a>
-                                <a className="link-footer" href="#">Risk Disclosure</a>
+                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
+                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/privacy-policy">Privacy Policy</a>
+                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/risk-disclosure-statement">Risk Disclosure</a>
                                 <a className="link-footer" href="#">Coinmarketcap </a>
                                 <a className="link-footer" href="#">Coingecko </a>
                             </div>
