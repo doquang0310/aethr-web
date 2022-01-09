@@ -131,8 +131,9 @@ export default class FullpageWrapper extends React.Component {
                     <Navbar expand="lg" fixed="top" className="main-header">
                         <Container>
                             <Navbar.Brand href="#">
-                                <img src='/images/logo.gif' width={165} height={60}/>
-
+                                <video playsInline autoPlay loop muted width={165}>
+                                    <source type="video/webm" src="/images/logo.webm" />
+                                </video>
                             </Navbar.Brand>
                             <Nav className="me-auto main-nav">
                                 <Nav.Link href="#home" className="item-nav">Home</Nav.Link>
