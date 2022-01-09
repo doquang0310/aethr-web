@@ -30,6 +30,10 @@ a {
 .h-100 {
     height: 100%;
 }
+.shadow-custom {
+    text-shadow: -1px 3px black, -2px 2px black;
+    -webkit-text-stroke-color: black;
+}
 :root {
     --clr-text-nor : #fff;
     --clr-text-nor-hov : #FFE96C;
@@ -76,12 +80,19 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.section-hero .video-banner {
+    width: 100%;
+}
+
 .main-header {
-    background: #0f18185c;
-    min-height: 88px;
+    background: url('/images/header.png');
+    min-height: 84px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     display: flex;
-    padding: 0px 40px;
+    padding: 0px 65px;
 }
 
 .main-header .logo-pc {
@@ -95,23 +106,29 @@ a {
     width: 200px;
 }
 
+.navbar {
+    padding: 0px!important;
+}
+
+.navbar.fixed-top {
+    top: -4px;
+}
+
 .main-header .main-nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 60px;
     width: 100%;
 }
 
-.main-header .main-nav .item-nav {
+.main-header .main-nav .item-nav,.nav-mobie-body .item-nav {
     color: var(--clr-text-nor)!important;
     text-transform: uppercase;
-    text-shadow: 1px 3px black, -2px 3px black, -2px -2px black, 1px -2px black, 3px 3px black, 3px -2px black, 3px 1px black;
-
     cursor: pointer;
+    font-size: 18px;
 }
 
-.main-header .main-nav .item-nav:hover{
+.main-header .main-nav .item-nav:hover.nav-mobie-body .item-nav:hover{
     color: var(--clr-text-nor-hov)!important;
 }
 
@@ -218,7 +235,6 @@ a {
     text-align: center;
     font-size: 28px;
     color: white;
-    text-shadow: 1px 3px black, -2px 3px black, -2px -2px black, 1px -2px black, 3px 3px black, 3px -2px black, 3px 1px black;
 }
 .section-eco .one-card-eco .wrap-image-card-eco {
     margin-top: 27px;
@@ -294,11 +310,11 @@ a {
 .section-concept .trailer-game .img-trailer-right {
     position: absolute;
     right: -40px;
-    top: 55%;
+    top: 60%;
     z-index: 9999;
     -webkit-transform: translate(-0%, -50%) scaleX(-1);
     -moz-transform: translate(-0%, -50%) scaleX(-1);
-    transform: translate(50%, -50%) scaleX(-1) rotate(332deg);
+    transform: translate(50%, -50%) scaleX(-1) rotate(6deg);
 }
 .section-concept .show-trailer {
     width: 100%;
@@ -314,18 +330,12 @@ a {
     padding: 40px 46px;
 }
 
-.section-concept .container-concept-game {
-    width: 100%;
-    background: url('/images/background-concept.png') no-repeat 50%;
-    background-size: cover;
-    flex:  0 0 60%;
-}
 .section-concept .concept-game {
-    padding-top: 56.25%;
-    position: relative;
+    flex: 0 0 60%;
+}
+.section-concept .concept-game img {
     width: 100%;
 }
-
 .section-concept .concept-game .show-concept {
     display: flex;
     justify-content: center;
@@ -358,26 +368,7 @@ a {
 }
 
 .section-concept .concept-game .content-concept {
-    position: absolute;
-    top: 20px;
-    padding: 0px 20px;
-}
-.section-concept .concept-game .content-concept img {
-    display: inline-block!important;
-}
-.section-concept .concept-game .content-concept img.img-concept1 {
-    width: 30%;
-    height: auto;
-}
 
-.section-concept .concept-game .content-concept img.img-concept2 {
-    width: 30%;
-    height: auto;
-}
-
-.section-concept .concept-game .content-concept img.img-concept3 {
-    width: 40%;
-    height: auto;
 }
 .section-concept .concept-game span.name-concept {
     font-family: 'Love Ya Like A Sister', cursive;
@@ -564,7 +555,7 @@ a {
     font-size: 23px;
     color: #FFE092;
     margin-top: -25px;
-    text-shadow: 5px 5px black;
+    margin-bottom: 0px;
 }
 
 .section-roadmap .bot-road {
@@ -576,14 +567,13 @@ a {
 
 .section-roadmap .bot-road .item {
     text-align: center;
-    width: 200px;
+    width: 150px;
 }
 
 .section-roadmap .item .content-roadmap p {
     color: white;
     font-size: 18px;
     margin-bottom: 0px;
-    text-shadow: 1px 5px black;
     text-align: left;
     white-space: nowrap;
 }
@@ -657,7 +647,6 @@ a {
     max-width: 70%;
     text-align: center;
     font-size: 22px;
-    text-shadow: 1px 3px black;
 }
 .section-tokenomics .center-box {
     display: flex;
@@ -741,14 +730,12 @@ a {
     color: #FFE96C;
     font-size: 18px;
     margin-bottom: 0px;
-    text-shadow: 1px 3px black;
 }
 
 .section-core-team .wrap-core-team .team-member .position {
     color: white;
     font-size: 18px;
     margin-bottom: 0px;
-    text-shadow: 1px 3px black;
 }
 .section-community {
     background-image: url('/images/bg-team.png');
@@ -798,7 +785,6 @@ a {
     margin-bottom: 0px;
     font-size: 40px;
     color: white;
-    text-shadow: 1px 3px black;
     margin-bottom: 5px;
 }
 
@@ -824,7 +810,6 @@ a {
 }
 .footer .wrap-logo-footer p {
     color: white;
-    text-shadow: 1px 3px black;
     margin-top: 10px;
 }
 .footer .title-footer {
@@ -852,14 +837,275 @@ a {
     flex: 0 0 33%;
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
-    .main-header {
-        padding-top: 20px;
+@media (min-width: 992px) and (max-width: 1279px) {
+    .section-hero {
+        height: 100%;
     }
     .section-eco .one-card-eco {
+        width: 296px;
+        height: 400px;
+        background-position: center;
+        padding-top: 60px;
+        padding-bottom: 35px;
+        padding-left: 44px;
+        padding-right: 51px;
+    }
+    .section-eco .one-card-eco img {
+        width: 50px;
+    }
+    .section-hero .video-banner {
+        margin-bottom: -20px;
+    }
+    .section-eco .one-card-eco .content-card-eco {
+        padding: 10px;
+        min-height: 122px;
+    }
+    .section-concept .container-trailer-game {
+        width: 80%;
+    }
+    .concept-hero video {
+        width: 80%;
+    }
+    .slick-heros .wrapper-one-hero {
+        height: 210px;
+    }
+    .slick-heros .slick-center .wrapper-one-hero .image-slick-hero {
+        width: 105px;
+    }
+    .section-roadmap::before {
+        height: 250px;
+    }
+    .section-roadmap .item .content-roadmap p {
+        font-size: 14px;
+    }
+    .team-member img {
+        max-width: 100%;
+    }
+    .section-core-team {
+        background-position: 0 -200px;
+    }
+    .vesting-table {
+        width: unset;
+    }
+    .section-token-allocation th, .section-token-allocation td, .section-token-allocation tr {
+        min-width: unset;
+    }
+    .section-tokenomics .wrap-tokenomic .wrap-center-box img.arrowcenter {
+        width: 60px;
+    }
+    .section-community .wrap-all-community .one-item {
+        background-size: cover;
+        height: 174px;
+        flex: 0 0 20%;
+    }
+    .section-community::before {
+        background-position: -350px -100px;
+        top: 70px;
+    }
+    .section-community {
+        background-position: 0px -600px;
+    }
+}
+@media (max-width: 1279px) {
+    .nav-pc {
+        display: none!important;
+    }
+    .nav-mobile {
+        display: flex!important;
+        background : #d6d8d95c;
+    }
+}
+@media (min-width: 1280px) {
+    .nav-pc {
+        display: flex!important;
+    }
+    .nav-mobile {
+        display: none!important;
+    }
+}
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .section-community .wrap-all-community .one-item {
+        background-size: cover;
+        height: 200px;
+        flex: 0 0 20%;
+    }
+    .section-community::before {
+        background-position: -350px -100px;
+        top: 70px;
+    }
+    .section-community {
+        background-position: 0px -600px;
+    }
+    .team-member img {
+        max-width: 100%;
+    }
+    .slick-heros .one-hero {
+        height: 220px;
+    }
+    .main-header {
+        height: 71px;
+        width: 100%;
+        min-height: unset;
+    }
+    .main-header .main-nav .item-nav, .nav-mobie-body .item-nav {
+        font-size: 16px;
+    }
+    .navbar-brand video {
+        width: 150px;
+    }
+    .section-hero {
         height: unset;
-        padding-left: 69px;
-        padding-right: 50px;
-        max-width: 356px;
+    }
+    .section-eco {
+        margin-top: -10px;
+    }
+    .section-eco .one-card-eco {
+
+        width: 416px;
+        background-position: center;
+        padding-top: 60px;
+        padding-bottom: 35px;
+        padding-left: 75px;
+        padding-right: 83px;
+        height: 473.5px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .wrap-image-card-eco {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .wrap-image-card-eco img {
+        width: 70px;
+    }
+    .section-eco .one-card-eco {
+        width: 296px;
+        height: 400px;
+        background-position: center;
+        padding-top: 60px;
+        padding-bottom: 35px;
+        padding-left: 44px;
+        padding-right: 51px;
+    }
+    .section-eco .one-card-eco .content-card-eco {
+        padding: 10px;
+        min-height: unset;
+    }
+    .mobile-center {
+        justify-content: center;
+    }
+    .slick-heros .wrapper-one-hero {
+        height: 262px;
+    }
+    .slick-heros .slick-center .wrapper-one-hero .image-slick-hero {
+        width: 154px;
+    }
+    .concept-hero video {
+        width: 80%;
+    }
+    .section-roadmap::before {
+        height: 225px;
+    }
+    .section-roadmap .wrap-roadmap {
+        display: flex;
+    }
+    .section-roadmap .top-road,.section-roadmap .bot-road {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 49.5%;
+        align-items: center;
+    }
+    .mid-road {
+        border-left: 4px solid #FFE48D;
+        border-right: 3px solid #B77300;
+        border-top: none;
+        border-bottom: none;
+    }
+    .section-roadmap .bot-road .item {
+        width: 100%;
+        padding-left: 60px;
+        position: relative;
+        margin-bottom: 20px;
+       
+    }
+    .section-roadmap .bot-road .content-roadmap p {
+        text-align: center!important;
+    }
+    .section-roadmap .top-road .item {
+        width: 100%;
+        padding-left: 60px;
+        position: relative;
+       
+    }
+    .section-roadmap .bot-road .item .wrap-icon-end {
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        transform: rotate(90deg);
+    }
+    .section-roadmap .top-road .item {
+        padding-right: 60px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .section-roadmap .top-road .content-roadmap p {
+        text-align: center!important;
+    }
+    .section-roadmap .content-roadmap {
+        min-height: 81px;
+    }
+    .section-roadmap .top-road .end-road-top {
+        position: absolute;
+        top: 0px;
+        right: -5px;
+        transform: translate(0%, -50%) rotate(270deg);
+    }
+    .section-roadmap .bot-road {
+        justify-content: unset;
+    }
+    .wrap-tokenomic {
+        transform: scale(0.85);
+    }
+    .section-tokenomics .wrap-tokenomic .wrap-center-box img.arrowcenter {
+        width: 0px;
+    }
+    #token-allocation {
+        display: none;
+    }
+    .section-core-team .badge-section {
+        width: 100%!important;
+    }
+    .section-core-team .wrap-core-team .team-member {
+        flex: 0 0 50%;
+    }
+    .section-core-team .wrap-core-team .team-member img {
+        width: 100%;
+    }
+    .section-core-team {
+        background-position: unset;
+    }
+    .section-community .wrap-all-community .one-item {
+        flex: 0 0 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 123px;
+    }
+    .section-community .wrap-all-community .one-item img {
+        display: flex;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .section-community::before {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 1px) and (max-width: 1279px){
+    .section-hero {
+        height: unset;
+    }
+    .section-eco {
+        margin-top: -10px;
     }
 }

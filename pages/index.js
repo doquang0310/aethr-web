@@ -1,7 +1,7 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Slider from "react-slick";
-import { Container,Navbar,Nav } from 'react-bootstrap';
+import { Container,Navbar,Nav,NavDropdown,Offcanvas } from 'react-bootstrap';
 import Image from "next/image";
 export function NextArrow(props) {
     const { className, style, onClick } = props;
@@ -41,46 +41,34 @@ export default class FullpageWrapper extends React.Component {
     render() {
         var heros = [
             {
-                'image-badge' : '/images/badge-hero.png',
                 'name-hero' : 'Zeus',
-                'desciption-hero' : '1 The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos1.png'
+                'image-hero' : '/images/character/zues_img.png',
+                'video-hero' : '/images/character/zues.webm',
+                'banner-hero' : '/images/character/zues_concept.png'
             },
             {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos2.png'
+                'name-hero' : 'Super',
+                'image-hero' : '/images/character/super_img.png',
+                'video-hero' : '/images/character/super.webm',
+                'banner-hero' : '/images/character/super_concept.png'
             },
             {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos3.png'
+                'name-hero' : 'Robot',
+                'image-hero' : '/images/character/robot_img.png',
+                'video-hero' : '/images/character/robot.webm',
+                'banner-hero' : '/images/character/robot_concept.png'
             },
             {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos4.png'
+                'name-hero' : 'Dragon',
+                'image-hero' : '/images/character/dragon_img.png',
+                'video-hero' : '/images/character/dragon.webm',
+                'banner-hero' : '/images/character/dragon_concept.png'
             },
             {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos5.png'
-            },
-            {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos5.png'
-            },
-            {
-                'image-badge' : '/images/badge-hero.png',
-                'name-hero' : 'Zeus',
-                'desciption-hero' : 'The continents were separated and aparted by a seal. The moment when the 8 planets lined up was the seal became the weakest.',
-                'image-hero' : '/images/pos5.png'
+                'name-hero' : 'Alien',
+                'image-hero' : '/images/character/alien_img.png',
+                'video-hero' : '/images/character/alien.webm',
+                'banner-hero' : '/images/character/alien_concept.png'
             },
         ];
         var settings = {
@@ -98,9 +86,9 @@ export default class FullpageWrapper extends React.Component {
             prevArrow: <PrevArrow />,
             responsive: [
                 {
-                breakpoint: 768,
+                breakpoint: 1023,
                 settings: {
-                        arrows: false,
+                        arrows: true,
                         centerMode: true,
                         centerPadding: '40px',
                         slidesToShow: 3
@@ -125,26 +113,63 @@ export default class FullpageWrapper extends React.Component {
         return (
             <div id="fullpage-wrapper">
                 <section className='section-hero section' id="home">
-                    <video playsInline autoPlay loop muted>
+                    <video playsInline autoPlay loop muted className="video-banner">
                         <source type="video/webm" src="/videos/banner.webm" />
                     </video>
-                    <Navbar expand="lg" fixed="top" className="main-header">
-                        <Container>
+                    <Navbar expand={false}  fixed="top" className="nav-mobile">
+                        <Container fluid>
                             <Navbar.Brand href="#">
                                 <video playsInline autoPlay loop muted width={165}>
                                     <source type="video/webm" src="/images/logo.webm" />
                                 </video>
                             </Navbar.Brand>
-                            <Nav className="me-auto main-nav">
-                                <Nav.Link href="#home" className="item-nav">Home</Nav.Link>
-                                <Nav.Link href="#gameplay" className="item-nav">Gameplay</Nav.Link>
-                                <Nav.Link href="#tokenomics" className="item-nav">Tokenomics</Nav.Link>
-                                <Nav.Link href="#token-allocation" className="item-nav">Token Allocation</Nav.Link>
-                                <Nav.Link href="#team" className="item-nav">Team</Nav.Link>
-                                <Nav.Link href="#roadmap" className="item-nav">Roadmap</Nav.Link>
-                                <Nav.Link href="https://marketplace.aethr.world" className="item-nav">Marketplace</Nav.Link>
-                                <Nav.Link href="https://docs.aethr.world" className="item-nav">Document</Nav.Link>
-                            </Nav>
+                            <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                            <Navbar.Offcanvas
+                                id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel"
+                                placement="end"
+                            >
+                                <Offcanvas.Header closeButton>
+                                    <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+                                </Offcanvas.Header>
+                                <Offcanvas.Body className="nav-mobie-body">
+                                    <Nav className="justify-content-end flex-grow-1 pe-3 main-nav">
+                                        <Nav.Link href="#home" className="item-nav shadow-custom">Home</Nav.Link>
+                                        <Nav.Link href="#gameplay" className="item-nav shadow-custom">Gameplay</Nav.Link>
+                                        <Nav.Link href="#tokenomics" className="item-nav shadow-custom">Tokenomics</Nav.Link>
+                                        <Nav.Link href="#token-allocation" className="item-nav shadow-custom">Token Allocation</Nav.Link>
+                                        <Nav.Link href="#team" className="item-nav shadow-custom">Team</Nav.Link>
+                                        <Nav.Link href="#roadmap" className="item-nav shadow-custom">Roadmap</Nav.Link>
+                                        <Nav.Link href="https://marketplace.aethr.world" className="item-nav shadow-custom">Marketplace</Nav.Link>
+                                        <Nav.Link href="https://docs.aethr.world" className="item-nav shadow-custom">Document</Nav.Link>
+                                    </Nav>
+                                </Offcanvas.Body>
+                            </Navbar.Offcanvas>
+                        </Container>
+                    </Navbar>
+                    <Navbar fixed="top" className="nav-pc">
+                        <Container>
+                            <div  className="main-header">
+                                <Navbar.Brand href="#">
+                                    <video playsInline autoPlay loop muted width={165}>
+                                        <source type="video/webm" src="/images/logo.webm" />
+                                    </video>
+                                </Navbar.Brand>
+                                
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="me-auto main-nav">
+                                        <Nav.Link href="#home" className="item-nav shadow-custom">Home</Nav.Link>
+                                        <Nav.Link href="#gameplay" className="item-nav shadow-custom">Gameplay</Nav.Link>
+                                        <Nav.Link href="#tokenomics" className="item-nav shadow-custom">Tokenomics</Nav.Link>
+                                        <Nav.Link href="#token-allocation" className="item-nav shadow-custom">Token Allocation</Nav.Link>
+                                        <Nav.Link href="#team" className="item-nav shadow-custom">Team</Nav.Link>
+                                        <Nav.Link href="#roadmap" className="item-nav shadow-custom">Roadmap</Nav.Link>
+                                        <Nav.Link href="https://marketplace.aethr.world" className="item-nav shadow-custom">Marketplace</Nav.Link>
+                                        <Nav.Link href="https://docs.aethr.world" className="item-nav shadow-custom">Document</Nav.Link>
+                                    </Nav>
+                                </Navbar.Collapse>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            </div>
                         </Container>
                     </Navbar>
                 </section>
@@ -153,10 +178,10 @@ export default class FullpageWrapper extends React.Component {
                         <img src='/images/cloud1.png' className='cloud-top-left'></img>
                         <img src='/images/cloud1.png' className='cloud-top-right'></img>
                         <img src='/images/cloud1.png' className='cloud-top-center'></img>
-                        <div className='row'>
-                            <div className='col-md-4 z-index9'>
+                        <div className='row mobile-center'>
+                            <div className='col-md-6 col-12 col-lg-4 z-index9'>
                                 <div className='one-card-eco card-1'>
-                                    <p className="title-card-eco">Build</p>
+                                    <p className="title-card-eco shadow-custom">Build</p>
                                     <div className="wrap-image-card-eco">
                                         <img src="/images/build.png" alt="" />
                                     </div>
@@ -165,9 +190,9 @@ export default class FullpageWrapper extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-md-4 z-index9'>
+                            <div className='col-md-6 col-12 col-lg-4 z-index9'>
                                 <div className='one-card-eco card-2'>
-                                <p className="title-card-eco">Battle</p>
+                                <p className="title-card-eco shadow-custom">Battle</p>
                                     <div className="wrap-image-card-eco">
                                         <img src="/images/battle.png" alt="" />
                                     </div>
@@ -176,9 +201,9 @@ export default class FullpageWrapper extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-md-4 z-index9'>
+                            <div className='col-md-6 col-12 col-lg-4 z-index9'>
                                 <div className='one-card-eco card-3'>
-                                    <p className="title-card-eco">Reward</p>
+                                    <p className="title-card-eco shadow-custom">Reward</p>
                                     <div className="wrap-image-card-eco">
                                         <img src="/images/reward.png" alt="" />
                                     </div>
@@ -194,8 +219,14 @@ export default class FullpageWrapper extends React.Component {
                     <div className='container h-100 justify-content-center d-flex align-items-center'>
                         <div className='container-trailer-game'>
                             <div className='trailer-game'>
-                                <img src="/images/pos2.png" alt="" className="img-trailer-left"/>
-                                <img src="/images/pos3.png" alt="" className="img-trailer-right"/>
+                                <video playsInline autoPlay loop muted width={400}  className="img-trailer-left">
+                                    <source type="video/webm" src="/images/character/zues.webm" />
+                                </video>
+                                <video playsInline autoPlay loop muted width={250}  className="img-trailer-right">
+                                    <source type="video/webm" src="/images/character/robot.webm" />
+                                </video>
+                                {/* <img src="/images/pos2.png" alt="" className="img-trailer-left"/> */}
+                                {/* <img src="/images/pos3.png" alt="" className="img-trailer-right"/> */}
                                 <div className='show-trailer'>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/J7eYhM6wXPo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 </div>
@@ -224,20 +255,13 @@ export default class FullpageWrapper extends React.Component {
                             {heros.map(function(hero, index){
                                 return (
                                     <div className="wrap-content-game-hero"  key={index}>
-                                        <div className='container-concept-game'>
-                                            <div className='concept-game'>
-                                                <div className='show-concept'>
-                                                    <div className='content-concept'>
-                                                        <img src='/images/zeus1.png' alt="" className='img-concept1'></img>
-                                                        <img src='/images/zues2.png' alt="" className='img-concept2'></img>
-                                                        <img src='/images/zeus3.png' alt="" className='img-concept3'></img>
-                                                    </div>
-                                                    <span className='name-concept'>Zeus Concept</span>
-                                                </div>
-                                            </div>
+                                        <div className='concept-game'>
+                                            <img src={hero['banner-hero']}/>
                                         </div>
                                         <div className="concept-hero">
-                                            <img src={hero['image-hero']} alt="" className="detail-hero" />
+                                            <video playsInline autoPlay loop muted className="detail-hero" >
+                                                <source type="video/webm" src={hero['video-hero']} />
+                                            </video>
                                         </div>
                                     </div>
                                 )
@@ -274,51 +298,51 @@ export default class FullpageWrapper extends React.Component {
                             <div className="top-road">
                                 <div className="item">
                                     <img src="/images/icrm1.png" alt="" />
-                                    <p className="date-roadmap">Q3/2021</p>
+                                    <p className="date-roadmap shadow-custom">Q3/2021</p>
                                     <div className="content-roadmap">
-                                        <p>Game design</p>
-                                        <p>Character Concept</p>
-                                        <p>Business Model</p>
+                                        <p class="shadow-custom">Game design</p>
+                                        <p class="shadow-custom">Character Concept</p>
+                                        <p class="shadow-custom">Business Model</p>
                                     </div>
-                                    <img src="/images/end-road.png" alt="" />
+                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
                                 <div className="item">
                                     <img src="/images/icrm2.png" alt="" />
                                     <p className="date-roadmap">January 2022</p>
                                     <div className="content-roadmap">
-                                        <p>NFT Sale</p>
-                                        <p>Game Alpha Test</p>
+                                        <p class="shadow-custom">NFT Sale</p>
+                                        <p class="shadow-custom">Game Alpha Test</p>
                                     </div>
-                                    <img src="/images/end-road.png" alt="" />
+                                    <img src="/images/end-road.png" alt=""  className="end-road-top"/>
                                 </div>
                                 <div className="item">
                                     <img src="/images/icrm3.png" alt="" />
                                     <p className="date-roadmap">March 2022</p>
                                     <div className="content-roadmap">
-                                        <p>Game Release</p>
-                                        <p>Staking</p>
+                                        <p class="shadow-custom">Game Release</p>
+                                        <p class="shadow-custom">Staking</p>
                                     </div>
-                                    <img src="/images/end-road.png" alt="" />
+                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
                                 <div className="item">
                                     <img src="/images/icrm4.png" alt="" />
                                     <p className="date-roadmap">Q3/2022</p>
                                     <div className="content-roadmap">
-                                        <p>Tournament Mode</p>
-                                        <p>Special Events</p>
-                                        <p></p>
+                                        <p class="shadow-custom">Tournament Mode</p>
+                                        <p class="shadow-custom">Special Events</p>
+                                        <p class="shadow-custom"></p>
                                     </div>
-                                    <img src="/images/end-road.png" alt="" />
+                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
                                 <div className="item">
                                     <img src="/images/icrm5.png" alt="" />
                                     <p className="date-roadmap">2023</p>
                                     <div className="content-roadmap">
-                                        <p>Multi - chain</p>
-                                        <p>NFT Crosschain</p>
-                                        <p></p>
+                                        <p class="shadow-custom">Multi - chain</p>
+                                        <p class="shadow-custom">NFT Crosschain</p>
+                                        <p class="shadow-custom"></p>
                                     </div>
-                                    <img src="/images/end-road.png" alt="" />
+                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
                             </div>
                             <div className="mid-road">
@@ -332,9 +356,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm6.png" alt="" />
                                     <p className="date-roadmap">Q4/2021</p>
                                     <div className="content-roadmap">
-                                        <p>Private Sales & Partnerships NFT</p>
-                                        <p>Development Smart Contract</p>
-                                        <p>Development Social Channels</p>
+                                        <p class="shadow-custom">Private Sales & Partnerships NFT</p>
+                                        <p class="shadow-custom">Development Smart Contract</p>
+                                        <p class="shadow-custom">Development Social Channels</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -344,9 +368,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm7.png" alt="" />
                                     <p className="date-roadmap">February 2022</p>
                                     <div className="content-roadmap">
-                                        <p>$ATH IDO</p>
-                                        <p>Game Public Testing</p>
-                                        <p>DEX Listing</p>
+                                        <p class="shadow-custom">$ATH IDO</p>
+                                        <p class="shadow-custom">Game Public Testing</p>
+                                        <p class="shadow-custom">DEX Listing</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -356,8 +380,8 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm8.png" alt="" />
                                     <p className="date-roadmap">Q2/2022</p>
                                     <div className="content-roadmap">
-                                        <p>PVP Mode </p>
-                                        <p>World Chat</p>
+                                        <p class="shadow-custom">PVP Mode </p>
+                                        <p class="shadow-custom">World Chat</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -367,14 +391,14 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm9.png" alt="" />
                                     <p className="date-roadmap">Q4/2022</p>
                                     <div className="content-roadmap">
-                                        <p>Metaverse Land</p>
+                                        <p class="shadow-custom">Metaverse Land</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="section-tokenomics section" id="tokenomics">
+                <section className="section-tokenomics section-token-allocation section" id="tokenomics">
                     <div className="container">
                         <div className="wrap-badge-section">
                             <Image src="/images/badge-tokenomic.png" alt="" width={345} height={130} />
@@ -382,19 +406,19 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-tokenomic">
                             <div className="left-box">
                                 <div className="item">
-                                    <p className="title-item">BUY MYSTERY BOXES</p>
+                                    <p className="title-item shadow-custom">BUY MYSTERY BOXES</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Marketplace Fees</p>
+                                    <p className="title-item shadow-custom">Marketplace Fees</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">P2E Incentives</p>
+                                    <p className="title-item shadow-custom">P2E Incentives</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Treasury Fund</p>
+                                    <p className="title-item shadow-custom">Treasury Fund</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Staking</p>
+                                    <p className="title-item shadow-custom">Staking</p>
                                 </div>
                             </div>
                             <div className="wrap-center-box">
@@ -402,10 +426,10 @@ export default class FullpageWrapper extends React.Component {
                                 <img src="/images/arrowcenter.png" alt="" className="arrowcenter" />
                                 <div className="center-box">
                                     <div className="item-center">
-                                        <p className="title-item">$ATH</p>
+                                        <p className="title-item shadow-custom">$ATH</p>
                                     </div>
                                     <div className="item-suply">
-                                        <p className="title-item">BEP-20 TOKEN Limited Supply</p>
+                                        <p className="title-item shadow-custom">BEP-20 TOKEN Limited Supply</p>
                                     </div>
                                 </div>
                                 <img src="/images/arrowcenter.png" alt="" className="arrowcenter" />
@@ -413,26 +437,24 @@ export default class FullpageWrapper extends React.Component {
                             </div>
                             <div className="right-box">
                                 <div className="item">
-                                    <p className="title-item">Adventure</p>
+                                    <p className="title-item shadow-custom">Adventure</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">PVP</p>
+                                    <p className="title-item shadow-custom">PVP</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Upgrade</p>
+                                    <p className="title-item shadow-custom">Upgrade</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Tournament</p>
+                                    <p className="title-item shadow-custom">Tournament</p>
                                 </div>
                                 <div className="item">
-                                    <p className="title-item">Shop In-game</p>
+                                    <p className="title-item shadow-custom">Shop In-game</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section className="section-token-allocation section" id="token-allocation">
-                    <div className="container">
+                    <div className="container" id="token-allocation">
                         <div className="wrap-badge-section">
                             <img src="/images/token-allocation.png" className="badge-w550" />
                         </div>
@@ -558,61 +580,61 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-core-team">
                             <div className="team-member">
                                 <img src="/images/t1.png" alt="" />
-                                <p className="name">Do Van Huy</p>
-                                <p className="position">CEO</p>
+                                <p className="name shadow-custom">Do Van Huy</p>
+                                <p className="position shadow-custom">CEO</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t2.png" alt="" />
-                                <p className="name">Nguyen Tuan Minh</p>
-                                <p className="position">CTO</p>
+                                <p className="name shadow-custom">Nguyen Tuan Minh</p>
+                                <p className="position shadow-custom">CTO</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t3.png" alt="" />
-                                <p className="name">Vu Dinh Hung</p>
-                                <p className="position">Data Analytics Lead</p>
+                                <p className="name shadow-custom">Vu Dinh Hung</p>
+                                <p className="position shadow-custom">Data Analytics Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t4.png" alt="" />
-                                <p className="name">Tran Quang Tung</p>
-                                <p className="position">Backend Developer Lead</p>
+                                <p className="name shadow-custom">Tran Quang Tung</p>
+                                <p className="position shadow-custom">Backend Developer Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t5.png" alt="" />
-                                <p className="name">Do Dinh Quang</p>
-                                <p className="position"> Blockchain Developer Lead</p>
+                                <p className="name shadow-custom">Do Dinh Quang</p>
+                                <p className="position shadow-custom"> Blockchain Developer Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t6.png" alt="" />
-                                <p className="name">Do Hai Ha</p>
-                                <p className="position">Frontend Developer Lead</p>
+                                <p className="name shadow-custom">Do Hai Ha</p>
+                                <p className="position shadow-custom">Frontend Developer Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t7.png" alt="" />
-                                <p className="name">Khuat Minh Son</p>
-                                <p className="position">3D Art Lead</p>
+                                <p className="name shadow-custom">Khuat Minh Son</p>
+                                <p className="position shadow-custom">3D Art Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t8.png" alt="" />
-                                <p className="name">Vu Thi Huyen</p>
-                                <p className="position">2D Art Lead</p>
+                                <p className="name shadow-custom">Vu Thi Huyen</p>
+                                <p className="position shadow-custom">2D Art Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t9.png" alt="" />
-                                <p className="name">Nguyen Xuan Minh</p>
-                                <p className="position">Animation </p>
+                                <p className="name shadow-custom">Nguyen Xuan Minh</p>
+                                <p className="position shadow-custom">Animation </p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t10.png" alt="" />
-                                <p className="name">Nguyen Nhon Duy</p>
-                                <p className="position">Investor Relationship Director</p>
+                                <p className="name shadow-custom">Nguyen Nhon Duy</p>
+                                <p className="position shadow-custom">Investor Relationship Director</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section className="section fp-auto-height section-community">
                     <div className="badge-community-custom">
-                        <p>Community</p>
-                    </div>
+                        <p className="shadow-custom">Community</p>
+                    </div> 
                     <div className="container">
                         <div className="wrap-all-community">
                             <div className="one-item">
@@ -646,11 +668,13 @@ export default class FullpageWrapper extends React.Component {
                 <section className="footer section fp-auto-height">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-3 text-center wrap-logo-footer">
-                                <img src="/images/logo.png" alt="Logo Aethr" className="logo-footer" />
-                                <p>Copyright 2021 by Gapu Studio</p>
+                            <div className="col-md-6 col-12 col-lg-3 text-center wrap-logo-footer">
+                                <video playsInline autoPlay loop muted width={287}>
+                                    <source type="video/webm" src="/images/logo.webm" />
+                                </video>
+                                <p className="shadow-custom">Copyright 2021 by Gapu Studio</p>
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-6 col-12 col-lg-3">
                                 <h3 className="title-footer">About</h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <a className="link-footer" href="#">White Paper</a>
@@ -659,7 +683,7 @@ export default class FullpageWrapper extends React.Component {
                                 <a className="link-footer" href="#">Marketplace</a>
 
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-6 col-12 col-lg-3">
                                 <h3 className="title-footer">Info </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <a className="link-footer" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
@@ -668,7 +692,7 @@ export default class FullpageWrapper extends React.Component {
                                 <a className="link-footer" href="#">Coinmarketcap </a>
                                 <a className="link-footer" href="#">Coingecko </a>
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-6 col-12 col-lg-3">
                                 <h3 className="title-footer">Social </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <div className="wrap-social">
