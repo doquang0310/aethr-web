@@ -131,7 +131,8 @@ export default class FullpageWrapper extends React.Component {
                     <Navbar expand="lg" fixed="top" className="main-header">
                         <Container>
                             <Navbar.Brand href="#">
-                                <Image src='/images/logo.png' width={"189px"} height={"57px"} />
+                                <img src='/images/logo.gif' width={165} height={60}/>
+
                             </Navbar.Brand>
                             <Nav className="me-auto main-nav">
                                 <Nav.Link href="#home" className="item-nav">Home</Nav.Link>
