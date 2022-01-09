@@ -44,19 +44,19 @@ export default class FullpageWrapper extends React.Component {
                 'name-hero' : 'Zeus',
                 'image-hero' : '/images/character/zues_img.png',
                 'video-hero' : '/images/character/zues.webm',
-                'banner-hero' : '/images/character/zues_concept.png'
+                'banner-hero' : '/images/character/zues_concept.PNG'
             },
             {
                 'name-hero' : 'Super',
                 'image-hero' : '/images/character/super_img.png',
                 'video-hero' : '/images/character/super.webm',
-                'banner-hero' : '/images/character/super_concept.png'
+                'banner-hero' : '/images/character/super_concept.PNG'
             },
             {
                 'name-hero' : 'Robot',
                 'image-hero' : '/images/character/robot_img.png',
                 'video-hero' : '/images/character/robot.webm',
-                'banner-hero' : '/images/character/robot_concept.png'
+                'banner-hero' : '/images/character/robot_concept.PNG'
             },
             {
                 'name-hero' : 'Dragon',
