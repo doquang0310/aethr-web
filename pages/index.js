@@ -300,9 +300,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm1.png" alt="" />
                                     <p className="date-roadmap shadow-custom">Q3/2021</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Game design</p>
-                                        <p class="shadow-custom">Character Concept</p>
-                                        <p class="shadow-custom">Business Model</p>
+                                        <p className="shadow-custom">Game design</p>
+                                        <p className="shadow-custom">Character Concept</p>
+                                        <p className="shadow-custom">Business Model</p>
                                     </div>
                                     <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
@@ -310,8 +310,8 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm2.png" alt="" />
                                     <p className="date-roadmap">January 2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">NFT Sale</p>
-                                        <p class="shadow-custom">Game Alpha Test</p>
+                                        <p className="shadow-custom">NFT Sale</p>
+                                        <p className="shadow-custom">Game Alpha Test</p>
                                     </div>
                                     <img src="/images/end-road.png" alt=""  className="end-road-top"/>
                                 </div>
@@ -319,8 +319,8 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm3.png" alt="" />
                                     <p className="date-roadmap">March 2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Game Release</p>
-                                        <p class="shadow-custom">Staking</p>
+                                        <p className="shadow-custom">Game Release</p>
+                                        <p className="shadow-custom">Staking</p>
                                     </div>
                                     <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
@@ -328,9 +328,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm4.png" alt="" />
                                     <p className="date-roadmap">Q3/2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Tournament Mode</p>
-                                        <p class="shadow-custom">Special Events</p>
-                                        <p class="shadow-custom"></p>
+                                        <p className="shadow-custom">Tournament Mode</p>
+                                        <p className="shadow-custom">Special Events</p>
+                                        <p className="shadow-custom"></p>
                                     </div>
                                     <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
@@ -338,9 +338,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm5.png" alt="" />
                                     <p className="date-roadmap">2023</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Multi - chain</p>
-                                        <p class="shadow-custom">NFT Crosschain</p>
-                                        <p class="shadow-custom"></p>
+                                        <p className="shadow-custom">Multi - chain</p>
+                                        <p className="shadow-custom">NFT Crosschain</p>
+                                        <p className="shadow-custom"></p>
                                     </div>
                                     <img src="/images/end-road.png" alt="" className="end-road-top" />
                                 </div>
@@ -356,9 +356,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm6.png" alt="" />
                                     <p className="date-roadmap">Q4/2021</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Private Sales & Partnerships NFT</p>
-                                        <p class="shadow-custom">Development Smart Contract</p>
-                                        <p class="shadow-custom">Development Social Channels</p>
+                                        <p className="shadow-custom">Private Sales & Partnerships NFT</p>
+                                        <p className="shadow-custom">Development Smart Contract</p>
+                                        <p className="shadow-custom">Development Social Channels</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -368,9 +368,9 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm7.png" alt="" />
                                     <p className="date-roadmap">February 2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">$ATH IDO</p>
-                                        <p class="shadow-custom">Game Public Testing</p>
-                                        <p class="shadow-custom">DEX Listing</p>
+                                        <p className="shadow-custom">$ATH IDO</p>
+                                        <p className="shadow-custom">Game Public Testing</p>
+                                        <p className="shadow-custom">DEX Listing</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -380,8 +380,8 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm8.png" alt="" />
                                     <p className="date-roadmap">Q2/2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">PVP Mode </p>
-                                        <p class="shadow-custom">World Chat</p>
+                                        <p className="shadow-custom">PVP Mode </p>
+                                        <p className="shadow-custom">World Chat</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -391,7 +391,7 @@ export default class FullpageWrapper extends React.Component {
                                     <img src="/images/icrm9.png" alt="" />
                                     <p className="date-roadmap">Q4/2022</p>
                                     <div className="content-roadmap">
-                                        <p class="shadow-custom">Metaverse Land</p>
+                                        <p className="shadow-custom">Metaverse Land</p>
                                     </div>
                                 </div>
                             </div>
@@ -456,7 +456,7 @@ export default class FullpageWrapper extends React.Component {
                     </div>
                     <div className="container" id="token-allocation">
                         <div className="wrap-badge-section">
-                            <img src="/images/token-allocation.png" className="badge-w550" />
+                            <img src="/images/token-allocation.png" className="badge-w550" alt="" />
                         </div>
                         <div className="wrap-table">
                             <table>
@@ -575,7 +575,7 @@ export default class FullpageWrapper extends React.Component {
                 <section className="section-core-team section" id="team">
                     <div className="container">
                         <div className="wrap-badge-section">
-                            <img src="/images/badge-coreteam.png" className="badge-section badge-w550" />
+                            <img src="/images/badge-coreteam.png" className="badge-section badge-w550" alt="" />
                         </div>
                         <div className="wrap-core-team">
                             <div className="team-member">
