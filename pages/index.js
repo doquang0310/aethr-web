@@ -16,6 +16,19 @@ export function PrevArrow(props) {
         <img src="/images/prev-icon.png" alt="" onClick={onClick} className={className} style={{ ...style, height: "87px", width: "65px",left: "-100px" }} />
     );
 }
+export function NextArrowMobile(props) {
+    const { className, style, onClick } = props;
+    return (
+        <img src="/images/next-icon.png" alt="" onClick={onClick} className={className} style={{ ...style, height: "87px", width: "65px",right: "-10px" }} />
+    );
+}
+  
+export function PrevArrowMobile(props) {
+    const { className, style, onClick } = props;
+    return (
+        <img src="/images/prev-icon.png" alt="" onClick={onClick} className={className} style={{ ...style, height: "87px", width: "65px",left: "-10px" }} />
+    );
+}
 export default class FullpageWrapper extends React.Component {
     constructor(props) {
         super(props);
@@ -71,6 +84,10 @@ export default class FullpageWrapper extends React.Component {
                 'banner-hero' : '/images/character/alien_concept.png'
             },
         ];
+        var settingsMobile = {
+            nextArrow: <NextArrowMobile />,
+            prevArrow: <PrevArrowMobile />,
+        };
         var settings = {
             asNavFor : this.state.nav1,
             ref : slider => (this.slider2 = slider),
@@ -95,11 +112,17 @@ export default class FullpageWrapper extends React.Component {
                     }
                 },
                 {
-                breakpoint: 480,
+                breakpoint: 767,
                 settings: {
-                        arrows: false,
+                        arrows: true,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                breakpoint: 550,
+                settings: {
+                        arrows: true,
                         centerMode: true,
-                        centerPadding: '40px',
                         slidesToShow: 1
                     }
                 }
@@ -116,6 +139,7 @@ export default class FullpageWrapper extends React.Component {
                     <video playsInline autoPlay loop muted className="video-banner">
                         <source type="video/webm" src="/videos/banner.webm" />
                     </video>
+                    <img src='/images/cloud5.png' className='cloud-banner'></img>
                     <Navbar expand={false}  fixed="top" className="nav-mobile">
                         <Container fluid>
                             <Navbar.Brand href="#">
@@ -175,10 +199,7 @@ export default class FullpageWrapper extends React.Component {
                 </section>
                 <section className="section-eco section fp-auto-height">
                     <div className='container have-cloud'>
-                        <img src='/images/cloud1.png' className='cloud-top-left'></img>
-                        <img src='/images/cloud1.png' className='cloud-top-right'></img>
-                        <img src='/images/cloud1.png' className='cloud-top-center'></img>
-                        <div className='row mobile-center'>
+                        <Slider  {...settingsMobile} className="show-mobile z-index9">
                             <div className='col-md-6 col-12 col-lg-4 z-index9'>
                                 <div className='one-card-eco card-1'>
                                     <p className="title-card-eco shadow-custom">Build</p>
@@ -212,6 +233,43 @@ export default class FullpageWrapper extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                        </Slider>
+                        <div className="show-md">
+                            <div className='row mobile-center'>
+                                <div className='col-md-6 col-12 col-lg-4 z-index9'>
+                                    <div className='one-card-eco card-1'>
+                                        <p className="title-card-eco shadow-custom">Build</p>
+                                        <div className="wrap-image-card-eco">
+                                            <img src="/images/build.png" alt="" />
+                                        </div>
+                                        <div className="content-card-eco">
+                                            <p>Build your own team with your own strategy by using a wide range of NFT characters</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-md-6 col-12 col-lg-4 z-index9'>
+                                    <div className='one-card-eco card-2'>
+                                    <p className="title-card-eco shadow-custom">Battle</p>
+                                        <div className="wrap-image-card-eco">
+                                            <img src="/images/battle.png" alt="" />
+                                        </div>
+                                        <div className="content-card-eco">
+                                            <p>Travel through different planets, discover new lands and fight for valor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-md-6 col-12 col-lg-4 z-index9'>
+                                    <div className='one-card-eco card-3'>
+                                        <p className="title-card-eco shadow-custom">Reward</p>
+                                        <div className="wrap-image-card-eco">
+                                            <img src="/images/reward.png" alt="" />
+                                        </div>
+                                        <div className="content-card-eco">
+                                            <p>Win the battles and get different rewards including tokens & NFTs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -228,7 +286,7 @@ export default class FullpageWrapper extends React.Component {
                                 {/* <img src="/images/pos2.png" alt="" className="img-trailer-left"/> */}
                                 {/* <img src="/images/pos3.png" alt="" className="img-trailer-right"/> */}
                                 <div className='show-trailer'>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/J7eYhM6wXPo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YTSWRuAN5BU" title="AETHR Official Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -262,6 +320,9 @@ export default class FullpageWrapper extends React.Component {
                                             <video playsInline autoPlay loop muted className="detail-hero" >
                                                 <source type="video/webm" src={hero['video-hero']} />
                                             </video>
+                                            <div className="name-hero">
+                                                <p>{hero['name-hero']}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 )
@@ -294,104 +355,184 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-badge-section mt-3">
                             <Image src="/images/badge-roadmap.png" alt="" width={500} height={448} />
                         </div>
-                        <div className="wrap-roadmap">
-                            <div className="top-road">
-                                <div className="item">
-                                    <img src="/images/icrm1.png" alt="" />
-                                    <p className="date-roadmap shadow-custom">Q3/2021</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Game design</p>
-                                        <p className="shadow-custom">Character Concept</p>
-                                        <p className="shadow-custom">Business Model</p>
-                                    </div>
-                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
-                                </div>
-                                <div className="item">
-                                    <img src="/images/icrm2.png" alt="" />
-                                    <p className="date-roadmap">January 2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">NFT Sale</p>
-                                        <p className="shadow-custom">Game Alpha Test</p>
-                                    </div>
-                                    <img src="/images/end-road.png" alt=""  className="end-road-top"/>
-                                </div>
-                                <div className="item">
-                                    <img src="/images/icrm3.png" alt="" />
-                                    <p className="date-roadmap">March 2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Game Release</p>
-                                        <p className="shadow-custom">Staking</p>
-                                    </div>
-                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
-                                </div>
-                                <div className="item">
-                                    <img src="/images/icrm4.png" alt="" />
-                                    <p className="date-roadmap">Q3/2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Tournament Mode</p>
-                                        <p className="shadow-custom">Special Events</p>
-                                        <p className="shadow-custom"></p>
-                                    </div>
-                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
-                                </div>
-                                <div className="item">
-                                    <img src="/images/icrm5.png" alt="" />
-                                    <p className="date-roadmap">2023</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Multi - chain</p>
-                                        <p className="shadow-custom">NFT Crosschain</p>
-                                        <p className="shadow-custom"></p>
-                                    </div>
-                                    <img src="/images/end-road.png" alt="" className="end-road-top" />
+                        <Slider  {...settingsMobile} className="show-mobile z-index9 roadmap-mobile">
+                            <div className="item">
+                                <img src="/images/icrm1.png" alt="" />
+                                <p className="date-roadmap shadow-custom">Q3/2021</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Game design</p>
+                                    <p className="shadow-custom">Character Concept</p>
+                                    <p className="shadow-custom">Business Model</p>
                                 </div>
                             </div>
-                            <div className="mid-road">
+                            <div className="item">
+                                <img src="/images/icrm6.png" alt="" />
+                                <p className="date-roadmap">Q4/2021</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Private Sales & Partnerships NFT</p>
+                                    <p className="shadow-custom">Development Smart Contract</p>
+                                    <p className="shadow-custom">Development Social Channels</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm2.png" alt="" />
+                                <p className="date-roadmap">January 2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">NFT Sale</p>
+                                    <p className="shadow-custom">Game Alpha Test</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm7.png" alt="" />
+                                <p className="date-roadmap">February 2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">$ATH IDO</p>
+                                    <p className="shadow-custom">Game Public Testing</p>
+                                    <p className="shadow-custom">DEX Listing</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm3.png" alt="" />
+                                <p className="date-roadmap">March 2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Game Release</p>
+                                    <p className="shadow-custom">Staking</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm8.png" alt="" />
+                                <p className="date-roadmap">Q2/2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">PVP Mode </p>
+                                    <p className="shadow-custom">World Chat</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm4.png" alt="" />
+                                <p className="date-roadmap">Q3/2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Tournament Mode</p>
+                                    <p className="shadow-custom">Special Events</p>
+                                    <p className="shadow-custom"></p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm9.png" alt="" />
+                                <p className="date-roadmap">Q4/2022</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Metaverse Land</p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <img src="/images/icrm5.png" alt="" />
+                                <p className="date-roadmap">2023</p>
+                                <div className="content-roadmap">
+                                    <p className="shadow-custom">Multi - chain</p>
+                                    <p className="shadow-custom">NFT Crosschain</p>
+                                    <p className="shadow-custom"></p>
+                                </div>
+                            </div>
+                        </Slider>
+                        <div className="show-md">
+                            <div className="wrap-roadmap">
+                                <div className="top-road">
+                                    <div className="item">
+                                        <img src="/images/icrm1.png" alt="" />
+                                        <p className="date-roadmap shadow-custom">Q3/2021</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Game design</p>
+                                            <p className="shadow-custom">Character Concept</p>
+                                            <p className="shadow-custom">Business Model</p>
+                                        </div>
+                                        <img src="/images/end-road.png" alt="" className="end-road-top" />
+                                    </div>
+                                    <div className="item">
+                                        <img src="/images/icrm2.png" alt="" />
+                                        <p className="date-roadmap">January 2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">NFT Sale</p>
+                                            <p className="shadow-custom">Game Alpha Test</p>
+                                        </div>
+                                        <img src="/images/end-road.png" alt=""  className="end-road-top"/>
+                                    </div>
+                                    <div className="item">
+                                        <img src="/images/icrm3.png" alt="" />
+                                        <p className="date-roadmap">March 2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Game Release</p>
+                                            <p className="shadow-custom">Staking</p>
+                                        </div>
+                                        <img src="/images/end-road.png" alt="" className="end-road-top" />
+                                    </div>
+                                    <div className="item">
+                                        <img src="/images/icrm4.png" alt="" />
+                                        <p className="date-roadmap">Q3/2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Tournament Mode</p>
+                                            <p className="shadow-custom">Special Events</p>
+                                            <p className="shadow-custom"></p>
+                                        </div>
+                                        <img src="/images/end-road.png" alt="" className="end-road-top" />
+                                    </div>
+                                    <div className="item">
+                                        <img src="/images/icrm5.png" alt="" />
+                                        <p className="date-roadmap">2023</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Multi - chain</p>
+                                            <p className="shadow-custom">NFT Crosschain</p>
+                                            <p className="shadow-custom"></p>
+                                        </div>
+                                        <img src="/images/end-road.png" alt="" className="end-road-top" />
+                                    </div>
+                                </div>
+                                <div className="mid-road">
 
-                            </div>
-                            <div className="bot-road">
-                                <div className="item">
-                                    <div className="wrap-icon-end">
-                                        <img src="/images/end-road.png" alt="" />
-                                    </div>
-                                    <img src="/images/icrm6.png" alt="" />
-                                    <p className="date-roadmap">Q4/2021</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Private Sales & Partnerships NFT</p>
-                                        <p className="shadow-custom">Development Smart Contract</p>
-                                        <p className="shadow-custom">Development Social Channels</p>
-                                    </div>
                                 </div>
-                                <div className="item">
-                                    <div className="wrap-icon-end">
-                                        <img src="/images/end-road.png" alt="" />
+                                <div className="bot-road">
+                                    <div className="item">
+                                        <div className="wrap-icon-end">
+                                            <img src="/images/end-road.png" alt="" />
+                                        </div>
+                                        <img src="/images/icrm6.png" alt="" />
+                                        <p className="date-roadmap">Q4/2021</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Private Sales & Partnerships NFT</p>
+                                            <p className="shadow-custom">Development Smart Contract</p>
+                                            <p className="shadow-custom">Development Social Channels</p>
+                                        </div>
                                     </div>
-                                    <img src="/images/icrm7.png" alt="" />
-                                    <p className="date-roadmap">February 2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">$ATH IDO</p>
-                                        <p className="shadow-custom">Game Public Testing</p>
-                                        <p className="shadow-custom">DEX Listing</p>
+                                    <div className="item">
+                                        <div className="wrap-icon-end">
+                                            <img src="/images/end-road.png" alt="" />
+                                        </div>
+                                        <img src="/images/icrm7.png" alt="" />
+                                        <p className="date-roadmap">February 2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">$ATH IDO</p>
+                                            <p className="shadow-custom">Game Public Testing</p>
+                                            <p className="shadow-custom">DEX Listing</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="item">
-                                    <div className="wrap-icon-end">
-                                        <img src="/images/end-road.png" alt="" />
+                                    <div className="item">
+                                        <div className="wrap-icon-end">
+                                            <img src="/images/end-road.png" alt="" />
+                                        </div>
+                                        <img src="/images/icrm8.png" alt="" />
+                                        <p className="date-roadmap">Q2/2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">PVP Mode </p>
+                                            <p className="shadow-custom">World Chat</p>
+                                        </div>
                                     </div>
-                                    <img src="/images/icrm8.png" alt="" />
-                                    <p className="date-roadmap">Q2/2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">PVP Mode </p>
-                                        <p className="shadow-custom">World Chat</p>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="wrap-icon-end">
-                                        <img src="/images/end-road.png" alt="" />
-                                    </div>
-                                    <img src="/images/icrm9.png" alt="" />
-                                    <p className="date-roadmap">Q4/2022</p>
-                                    <div className="content-roadmap">
-                                        <p className="shadow-custom">Metaverse Land</p>
+                                    <div className="item">
+                                        <div className="wrap-icon-end">
+                                            <img src="/images/end-road.png" alt="" />
+                                        </div>
+                                        <img src="/images/icrm9.png" alt="" />
+                                        <p className="date-roadmap">Q4/2022</p>
+                                        <div className="content-roadmap">
+                                            <p className="shadow-custom">Metaverse Land</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -399,6 +540,11 @@ export default class FullpageWrapper extends React.Component {
                     </div>
                 </section>
                 <section className="section-tokenomics section-token-allocation section" id="tokenomics">
+                    <img src="/images/cloud1.png" alt="" className="cloud-animation cloud-pos1"/>
+                    <img src="/images/cloud1.png" alt="" className="cloud-animation cloud-pos2"/>
+
+                    <img src="/images/cloud1.png" alt="" className="cloud-animation cloud-pos3"/>
+
                     <div className="container">
                         <div className="wrap-badge-section">
                             <Image src="/images/badge-tokenomic.png" alt="" width={345} height={130} />
@@ -456,119 +602,125 @@ export default class FullpageWrapper extends React.Component {
                     </div>
                     <div className="container" id="token-allocation">
                         <div className="wrap-badge-section">
-                            <img src="/images/token-allocation.png" className="badge-w550" alt="" />
+                            <Image src="/images/token-allocation.png" alt="" width={550} height={144} />
+
                         </div>
-                        <div className="wrap-table">
-                            <table>
-                                <tr>
-                                    <td className="title-table">Token name</td>
-                                    <td className="title-table">$ATH</td>
-                                    <td className="title-table">Total Supply</td>
-                                    <td className="title-table">790,000,000</td>
-                                    <td className="title-table">Initial Market Cap (Without Liquidity)</td>
-                                    <td className="title-table">$1,058,600</td>
-                                    <td className="vesting-table title-table"> </td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table"></td>
-                                    <td className="title-table">Tokens</td>
-                                    <td className="title-table">Token Price</td>
-                                    <td className="title-table">Supply (%)</td>
-                                    <td className="title-table">TGE Unlock</td>
-                                    <td className="title-table">Token At TGE</td>
-                                    <td className="vesting-table text-center">Vesting</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Private Sale</td>
-                                    <td>79,000,000</td>
-                                    <td>$ 0.025</td>
-                                    <td>10%</td>
-                                    <td>6%</td>
-                                    <td>4,740,000</td>
-                                    <td className="vesting-table">TGE 6%, 2% at 4th week, 2% at 8th week then cliff for 1 month then vest linear daily in 12 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">IDO</td>
-                                    <td>7,900,000</td>
-                                    <td>$ 0.040</td>
-                                    <td>1.0%</td>
-                                    <td>25%</td>
-                                    <td>1,975,000</td>
-                                    <td className="vesting-table">TGE 25%, 1 months cliff, vest linear weekly in 3 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Liquidity & Listing</td>
-                                    <td>39,500,000</td>
-                                    <td></td>
-                                    <td>5.0%</td>
-                                    <td>50%</td>
-                                    <td>19,750,000</td>
-                                    <td className="vesting-table">TGE 25%, 3 months cliff, 10% then 3 months cliff, vest linear in 12 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Treasury Issuance</td>
-                                    <td>150,100,000</td>
-                                    <td></td>
-                                    <td>19.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">1 month cliff, Vest linear follow schedule in 36 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">P2E Incentives</td>
-                                    <td>181,700,000</td>
-                                    <td></td>
-                                    <td>23.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">Start vesting upon the game launch, 3% monthly</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Advisors & Partners</td>
-                                    <td>39,500,000</td>
-                                    <td></td>
-                                    <td>5.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">12 months cliff, vest linear weekly in 24 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Team</td>
-                                    <td>158,000,000</td>
-                                    <td></td>
-                                    <td>20.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">12 months cliff, vest linear weekly in 24 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Marketing/Ecosystem Fund</td>
-                                    <td>79,000,000</td>
-                                    <td></td>
-                                    <td>10.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">1 month cliff,  15% then 3 months cliff, vest linear in 15 months</td>
-                                </tr>
-                                <tr>
-                                    <td className="title-table">Development Fund</td>
-                                    <td>55,300,000</td>
-                                    <td></td>
-                                    <td>7.0%</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td className="vesting-table">12 months cliff, vest linear weekly in 12 months</td>
-                                </tr>
-                                <tr className="last-row">
-                                    <td className="title-table">TOTAL</td>
-                                    <td className="title-table">790,000,000</td>
-                                    <td></td>
-                                    <td className="title-table">100%</td>
-                                    <td></td>
-                                    <td className="title-table">26,465,000</td>
-                                    <td className="vesting-table"></td>
-                                </tr>
-                            </table>
+                        <div className="show-mobile">
+                            <Image src='/images/token-allocation-map.png' width={1120} height={761} />
+                        </div>
+                        <div className="show-md">
+                            <div className="wrap-table">
+                                <table>
+                                    <tr>
+                                        <td className="title-table">Token name</td>
+                                        <td className="title-table">$ATH</td>
+                                        <td className="title-table">Total Supply</td>
+                                        <td className="title-table">790,000,000</td>
+                                        <td className="title-table">Initial Market Cap (Without Liquidity)</td>
+                                        <td className="title-table">$1,058,600</td>
+                                        <td className="vesting-table title-table"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table"></td>
+                                        <td className="title-table">Tokens</td>
+                                        <td className="title-table">Token Price</td>
+                                        <td className="title-table">Supply (%)</td>
+                                        <td className="title-table">TGE Unlock</td>
+                                        <td className="title-table">Token At TGE</td>
+                                        <td className="vesting-table text-center">Vesting</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Private Sale</td>
+                                        <td>79,000,000</td>
+                                        <td>$ 0.025</td>
+                                        <td>10%</td>
+                                        <td>6%</td>
+                                        <td>4,740,000</td>
+                                        <td className="vesting-table">TGE 6%, 2% at 4th week, 2% at 8th week then cliff for 1 month then vest linear daily in 12 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">IDO</td>
+                                        <td>7,900,000</td>
+                                        <td>$ 0.040</td>
+                                        <td>1.0%</td>
+                                        <td>25%</td>
+                                        <td>1,975,000</td>
+                                        <td className="vesting-table">TGE 25%, 1 months cliff, vest linear weekly in 3 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Liquidity & Listing</td>
+                                        <td>39,500,000</td>
+                                        <td></td>
+                                        <td>5.0%</td>
+                                        <td>50%</td>
+                                        <td>19,750,000</td>
+                                        <td className="vesting-table">TGE 25%, 3 months cliff, 10% then 3 months cliff, vest linear in 12 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Treasury Issuance</td>
+                                        <td>150,100,000</td>
+                                        <td></td>
+                                        <td>19.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">1 month cliff, Vest linear follow schedule in 36 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">P2E Incentives</td>
+                                        <td>181,700,000</td>
+                                        <td></td>
+                                        <td>23.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">Start vesting upon the game launch, 3% monthly</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Advisors & Partners</td>
+                                        <td>39,500,000</td>
+                                        <td></td>
+                                        <td>5.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">12 months cliff, vest linear weekly in 24 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Team</td>
+                                        <td>158,000,000</td>
+                                        <td></td>
+                                        <td>20.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">12 months cliff, vest linear weekly in 24 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Marketing/Ecosystem Fund</td>
+                                        <td>79,000,000</td>
+                                        <td></td>
+                                        <td>10.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">1 month cliff,  15% then 3 months cliff, vest linear in 15 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Development Fund</td>
+                                        <td>55,300,000</td>
+                                        <td></td>
+                                        <td>7.0%</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td className="vesting-table">12 months cliff, vest linear weekly in 12 months</td>
+                                    </tr>
+                                    <tr className="last-row">
+                                        <td className="title-table">TOTAL</td>
+                                        <td className="title-table">790,000,000</td>
+                                        <td></td>
+                                        <td className="title-table">100%</td>
+                                        <td></td>
+                                        <td className="title-table">26,465,000</td>
+                                        <td className="vesting-table"></td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -577,8 +729,8 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-badge-section">
                             <img src="/images/badge-coreteam.png" className="badge-section badge-w550" alt="" />
                         </div>
-                        <div className="wrap-core-team">
-                            <div className="team-member">
+                        <Slider  {...settingsMobile} className="show-mobile z-index9 wrap-core-team">
+                        <div className="team-member">
                                 <img src="/images/t1.png" alt="" />
                                 <p className="name shadow-custom">Do Van Huy</p>
                                 <p className="position shadow-custom">CEO</p>
@@ -595,7 +747,7 @@ export default class FullpageWrapper extends React.Component {
                             </div>
                             <div className="team-member">
                                 <img src="/images/t4.png" alt="" />
-                                <p className="name shadow-custom">Tran Quang Tung</p>
+                                <p className="name shadow-custom">Pham Thanh Tung</p>
                                 <p className="position shadow-custom">Backend Developer Lead</p>
                             </div>
                             <div className="team-member">
@@ -621,12 +773,66 @@ export default class FullpageWrapper extends React.Component {
                             <div className="team-member">
                                 <img src="/images/t9.png" alt="" />
                                 <p className="name shadow-custom">Nguyen Xuan Minh</p>
-                                <p className="position shadow-custom">Animation </p>
+                                <p className="position shadow-custom">Animation Lead</p>
                             </div>
                             <div className="team-member">
                                 <img src="/images/t10.png" alt="" />
                                 <p className="name shadow-custom">Nguyen Nhon Duy</p>
                                 <p className="position shadow-custom">Investor Relationship Director</p>
+                            </div>
+                        </Slider>
+                        <div className="show-md">
+                            <div className="wrap-core-team">
+                                <div className="team-member">
+                                    <img src="/images/t1.png" alt="" />
+                                    <p className="name shadow-custom">Do Van Huy</p>
+                                    <p className="position shadow-custom">CEO</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t2.png" alt="" />
+                                    <p className="name shadow-custom">Nguyen Tuan Minh</p>
+                                    <p className="position shadow-custom">CTO</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t3.png" alt="" />
+                                    <p className="name shadow-custom">Vu Dinh Hung</p>
+                                    <p className="position shadow-custom">Data Analytics Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t4.png" alt="" />
+                                    <p className="name shadow-custom">Pham Thanh Tung</p>
+                                    <p className="position shadow-custom">Backend Developer Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t5.png" alt="" />
+                                    <p className="name shadow-custom">Do Dinh Quang</p>
+                                    <p className="position shadow-custom"> Blockchain Developer Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t6.png" alt="" />
+                                    <p className="name shadow-custom">Do Hai Ha</p>
+                                    <p className="position shadow-custom">Frontend Developer Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t7.png" alt="" />
+                                    <p className="name shadow-custom">Khuat Minh Son</p>
+                                    <p className="position shadow-custom">3D Art Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t8.png" alt="" />
+                                    <p className="name shadow-custom">Vu Thi Huyen</p>
+                                    <p className="position shadow-custom">2D Art Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t9.png" alt="" />
+                                    <p className="name shadow-custom">Nguyen Xuan Minh</p>
+                                    <p className="position shadow-custom">Animation Lead</p>
+                                </div>
+                                <div className="team-member">
+                                    <img src="/images/t10.png" alt="" />
+                                    <p className="name shadow-custom">Nguyen Nhon Duy</p>
+                                    <p className="position shadow-custom">Investor Relationship Director</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -674,7 +880,7 @@ export default class FullpageWrapper extends React.Component {
                                 </video>
                                 <p className="shadow-custom">Copyright 2021 by Gapu Studio</p>
                             </div>
-                            <div className="col-md-6 col-12 col-lg-3">
+                            <div className="col-md-6 col-12 col-sm-6 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">About</h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <a className="link-footer" href="#">White Paper</a>
@@ -683,7 +889,7 @@ export default class FullpageWrapper extends React.Component {
                                 <a className="link-footer" href="#">Marketplace</a>
 
                             </div>
-                            <div className="col-md-6 col-12 col-lg-3">
+                            <div className="col-md-6 col-12 col-sm-6 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">Info </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <a className="link-footer" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
@@ -692,7 +898,7 @@ export default class FullpageWrapper extends React.Component {
                                 <a className="link-footer" href="#">Coinmarketcap </a>
                                 <a className="link-footer" href="#">Coingecko </a>
                             </div>
-                            <div className="col-md-6 col-12 col-lg-3">
+                            <div className="col-md-6 col-12 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">Social </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <div className="wrap-social">

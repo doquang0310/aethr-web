@@ -79,6 +79,15 @@ a {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.section-hero .cloud-banner {
+    position: absolute;
+    z-index: 2;
+    top: 110%;
+    left: 0px;
+    transform: translate(0%, -50%);
 }
 
 .section-hero .video-banner {
@@ -367,9 +376,6 @@ a {
     font-weight: 400;
 }
 
-.section-concept .concept-game .content-concept {
-
-}
 .section-concept .concept-game span.name-concept {
     font-family: 'Love Ya Like A Sister', cursive;
     position: absolute;
@@ -418,6 +424,28 @@ a {
     align-items: center;
     justify-content: center;
     margin-left: auto;
+    position: relative;
+}
+
+.section-hero-concept .concept-hero .name-hero {
+    position: absolute;
+    bottom: 0px;
+    background: url('/images/card-name.png');
+    width: 100%;
+    height: 94px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-hero-concept .concept-hero .name-hero p {
+    color: white;
+    margin-top: 5%;
+    font-size: 1.2rem;
+    text-shadow: -1px 3px black, -2px 2px black;
 }
 
 .section-hero-concept .concept-hero img.detail-hero {
@@ -585,8 +613,71 @@ a {
     margin-top: -22px;
 }
 
-.section-tokenomics,.section-token-allocation {
-    background-color: #03294E;
+.section-tokenomics.section-token-allocation {
+    background-image: url('/images/bg-token.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* .section-tokenomics.section-token-allocation::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #0012326b;
+} */
+
+.cloud-pos1 {
+    position: absolute;
+    top: 10%;
+    opacity: 0.6!important;
+    right: -60%;
+    animation: kfcloudanimation1 10s infinite;
+}
+.cloud-pos2 {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    opacity: 0.6!important;
+    animation: kfcloudanimation2 10s infinite;
+}
+.cloud-pos3 {
+    position: absolute;
+    top: 35%;
+    right: -40%;
+    opacity: 0.6!important;
+    animation: kfcloudanimation3 30s infinite;
+}
+@keyframes kfcloudanimation1 {
+    0%   {
+        top: 10%;
+        right: -60%;
+    }
+    100%  {
+        top: 10%;
+        right: 120%;
+    }
+}
+@keyframes kfcloudanimation2 {
+    0%   {
+        top: 50%;
+        right: -10%;
+    }
+    100%  {
+        top: 50%;
+        right: 120%;
+    }
+}
+@keyframes kfcloudanimation3 {
+    0%   {
+        top: 35%;
+        right: -40%;
+    }
+    100%  {
+        right: 120%;
+    }
 }
 .section-tokenomics .item {
     background-image: url('/images/box-tokenomics.png');
@@ -628,9 +719,16 @@ a {
     justify-content: center;
     margin-top: 40px;
 }
+.section-tokenomics .wrap-tokenomic .wrap-badge-section img {
+    z-index: 2;
+}
+.section-tokenomics .wrap-tokenomic .left-box,.section-tokenomics .wrap-tokenomic .right-box{
+    z-index: 2;
+}
 .section-tokenomics .wrap-tokenomic .wrap-center-box {
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 .section-tokenomics .wrap-tokenomic .wrap-center-box img {
     object-fit: contain;
@@ -968,6 +1066,157 @@ a {
         padding-left: 75px;
         padding-right: 83px;
         height: 473.5px;
+    }
+}
+@media (min-width: 767px) {
+    .show-md {
+        display: block;
+    }
+    .show-mobile {
+        display: none!important;
+    }
+}
+@media (min-width: 510px) and (max-width: 767px) { 
+    .wrap-tokenomic {
+        transform: scale(0.6)!important;
+        margin-top: -120px!important;
+        margin-bottom: -100px!important;
+    }
+}
+@media (min-width: 1px) and (max-width: 767px) {
+    .section-community::before {
+        display: none;
+    }
+    .one-col-footer {
+        margin-bottom: 20px;
+    }
+    .wrap-logo-footer {
+        margin-bottom: 20px;
+    }
+    .footer {
+        background-size: cover;
+    }
+    .section-community .wrap-all-community {
+        justify-content: center;
+    }
+    .section-core-team {
+        background-position: unset;
+        padding-bottom: 100px;
+    }
+    .team-member img {
+        margin: 0 auto;
+    }
+    .badge-w550 {
+        width: 100%!important;
+    }
+    .section-roadmap {
+        padding-bottom: 100px;
+    }
+    .roadmap-mobile .item img {
+        margin: 0 auto;
+    }
+    .arrowcenter {
+        display: none;
+    }
+    .section-tokenomics .wrap-tokenomic {
+        transform: scale(0.45);
+        margin-top: -150px;
+        margin-bottom: -150px;
+    }
+    .roadmap-mobile .item {
+        display: block!important;
+        width: 80%!important;
+        margin: 0 auto;
+    }
+    .section-roadmap .item .date-roadmap {
+        text-align: center;
+    }
+    .section-roadmap .item .content-roadmap p {
+        text-align: center;
+    }
+    .wrap-badge-section {
+        width: 100%;
+    }
+    .description-character {
+        width: 100%;
+    }
+    .detail-hero {
+        width: 100%;
+    }
+    .section-concept .show-trailer iframe {
+        padding: 15px 16px;
+    }
+    .img-trailer-left,.img-trailer-right {
+        display: none;
+    }
+    .section-eco {
+        padding-bottom: 0px;
+    }
+    .nav-mobile {
+        height: 79px;
+    }
+    .video-banner {
+        margin-top: 75px;
+    }
+    .show-md {
+        display: none!important;
+    }
+    .show-mobile {
+        display: block;
+    }
+    .cloud-banner {
+        display: none;
+    }
+    .wrap-image-card-eco {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .wrap-image-card-eco img {
+        width: 70px;
+        margin: 0 auto;
+    }
+    .section-eco .one-card-eco {
+        width: 296px;
+        height: 400px;
+        background-position: center;
+        padding-top: 60px;
+        padding-bottom: 35px;
+        padding-left: 44px;
+        padding-right: 51px;
+        z-index: 3;
+        margin: 0 auto;
+    }
+    .section-eco .one-card-eco .content-card-eco {
+        padding: 10px;
+        min-height: unset;
+    }
+    .mobile-center {
+        justify-content: center;
+    }
+    .slick-heros .wrapper-one-hero {
+        height: 210px;
+    }
+    .slick-heros .slick-center .wrapper-one-hero .image-slick-hero {
+        width: 105px;
+    }
+    .slick-heros .slick-center .one-hero{
+        width: 122px!important;
+    }
+    .slick-heros .wrapper-one-hero  {
+        width: 150px!important;
+    }
+    .section-hero-concept .slick-next {
+        right: -25px!important;
+    }
+    .section-hero-concept .slick-prev {
+        left: -25px!important;
+    }
+    .section-hero-concept {
+        padding-bottom: 200px;
+    }
+    .section-roadmap::before {
+        height: 260px;
+        background-position: 0 0px!important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
