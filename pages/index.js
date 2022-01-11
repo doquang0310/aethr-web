@@ -878,13 +878,12 @@ export default class FullpageWrapper extends React.Component {
                                 <video playsInline autoPlay loop muted width={287}>
                                     <source type="video/webm" src="/images/logo.webm" />
                                 </video>
-                                <p className="shadow-custom">Copyright 2021 by Gapu Studio</p>
+                                <p className="shadow-custom">Copyright @2021 by AETHR WORLD</p>
                             </div>
                             <div className="col-md-6 col-12 col-sm-6 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">About</h3>
                                 <img src="/images/3dot.png" alt="" />
-                                <a className="link-footer" href="#">White Paper</a>
-                                <a className="link-footer" href="#">News</a>
+                                <a className="link-footer" href="https://medium.com/aethr-world/">News</a>
                                 <a className="link-footer" href="https://docs.aethr.world">Document </a>
                                 <a className="link-footer" href="#">Marketplace</a>
 
@@ -895,8 +894,6 @@ export default class FullpageWrapper extends React.Component {
                                 <a className="link-footer" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
                                 <a className="link-footer" href="https://docs.aethr.world/term-and-policy/privacy-policy">Privacy Policy</a>
                                 <a className="link-footer" href="https://docs.aethr.world/term-and-policy/risk-disclosure-statement">Risk Disclosure</a>
-                                <a className="link-footer" href="#">Coinmarketcap </a>
-                                <a className="link-footer" href="#">Coingecko </a>
                             </div>
                             <div className="col-md-6 col-12 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">Social </h3>
