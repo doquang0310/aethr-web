@@ -844,17 +844,17 @@ export default class FullpageWrapper extends React.Component {
                     <div className="container">
                         <div className="wrap-all-community">
                             <div className="one-item">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://discord.gg/BsjFZwDne6" target="_blank" rel="noopener noreferrer">
                                     <img src="/images/play.png" alt="" />
                                 </a>
                             </div>
                             <div className="one-item">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://t.me/+4repp4cg_-I0MWRl" target="_blank" rel="noopener noreferrer">
                                     <img src="/images/tele.png" alt="" />
                                 </a>
                             </div>
                             <div className="one-item">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://medium.com/aethr-world/" target="_blank" rel="noopener noreferrer">
                                     <img src="/images/flickr.png" alt="" />
                                 </a>
                             </div>
@@ -899,19 +899,19 @@ export default class FullpageWrapper extends React.Component {
                                 <h3 className="title-footer">Social </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <div className="wrap-social">
-                                    <a className="link-footer" href="#">
+                                    <a className="link-footer" href="https://twitter.com/AethrWorld" target="_blank">
                                         <img src="/images/i-twitter.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="#">
+                                    <a className="link-footer" href="https://t.me/+4repp4cg_-I0MWRl" target="_blank">
                                         <img src="/images/i-tele.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="#">
+                                    <a className="link-footer" href="https://discord.gg/BsjFZwDne6" target="_blank">
                                         <img src="/images/i-discord.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="#">
+                                    <a className="link-footer" href="#"  target="_blank">
                                         <img src="/images/i-redit.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="#">
+                                    <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw"  target="_blank">
                                         <img src="/images/i-youtube.png" alt="" />
                                     </a>
                                 </div>
