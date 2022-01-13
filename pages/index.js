@@ -54,19 +54,19 @@ export default class FullpageWrapper extends React.Component {
     render() {
         var heros = [
             {
-                'name-hero' : 'Zeus',
+                'name-hero' : 'God',
                 'image-hero' : '/images/character/zues_img.png',
                 'video-hero' : '/images/character/zues.webm',
                 'banner-hero' : '/images/character/zues_concept.PNG'
             },
             {
-                'name-hero' : 'Super',
+                'name-hero' : 'Human',
                 'image-hero' : '/images/character/super_img.png',
                 'video-hero' : '/images/character/super.webm',
                 'banner-hero' : '/images/character/super_concept.PNG'
             },
             {
-                'name-hero' : 'Robot',
+                'name-hero' : 'Machine',
                 'image-hero' : '/images/character/robot_img.png',
                 'video-hero' : '/images/character/robot.webm',
                 'banner-hero' : '/images/character/robot_concept.PNG'
@@ -907,9 +907,6 @@ export default class FullpageWrapper extends React.Component {
                                     </a>
                                     <a className="link-footer" href="https://discord.gg/BsjFZwDne6" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-discord.png" alt="" />
-                                    </a>
-                                    <a className="link-footer" href="#"  target="_blank">
-                                        <img src="/images/i-redit.png" alt="" />
                                     </a>
                                     <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-youtube.png" alt="" />

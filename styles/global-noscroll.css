@@ -75,7 +75,6 @@ a {
     transform: translate(-50%, -50%) scale(0.7);
 }
 .section-hero {
-    background-image: url('/images/banner-nologo.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;

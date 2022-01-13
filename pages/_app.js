@@ -4,7 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import '../styles/global-noscroll.css';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  )
+  
 }
 
 export default MyApp
