@@ -883,35 +883,35 @@ export default class FullpageWrapper extends React.Component {
                             <div className="col-md-6 col-12 col-sm-6 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">About</h3>
                                 <img src="/images/3dot.png" alt="" />
-                                <a className="link-footer" href="https://medium.com/aethr-world/">News</a>
-                                <a className="link-footer" href="https://docs.aethr.world">Document </a>
+                                <a className="link-footer" rel="noopener noreferrer"  target="_blank" href="https://medium.com/aethr-world/">News</a>
+                                <a className="link-footer" rel="noopener noreferrer"  target="_blank" href="https://docs.aethr.world">Document </a>
                                 <a className="link-footer" href="#">Marketplace</a>
 
                             </div>
                             <div className="col-md-6 col-12 col-sm-6 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">Info </h3>
                                 <img src="/images/3dot.png" alt="" />
-                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
-                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/privacy-policy">Privacy Policy</a>
-                                <a className="link-footer" href="https://docs.aethr.world/term-and-policy/risk-disclosure-statement">Risk Disclosure</a>
+                                <a className="link-footer" rel="noopener noreferrer"  target="_blank" href="https://docs.aethr.world/term-and-policy/terms-of-use">Terms of Use</a>
+                                <a className="link-footer" rel="noopener noreferrer"  target="_blank" href="https://docs.aethr.world/term-and-policy/privacy-policy">Privacy Policy</a>
+                                <a className="link-footer" rel="noopener noreferrer"  target="_blank" href="https://docs.aethr.world/term-and-policy/risk-disclosure-statement">Risk Disclosure</a>
                             </div>
                             <div className="col-md-6 col-12 col-lg-3 one-col-footer">
                                 <h3 className="title-footer">Social </h3>
                                 <img src="/images/3dot.png" alt="" />
                                 <div className="wrap-social">
-                                    <a className="link-footer" href="https://twitter.com/AethrWorld" target="_blank">
+                                    <a className="link-footer" href="https://twitter.com/AethrWorld" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-twitter.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://t.me/+4repp4cg_-I0MWRl" target="_blank">
+                                    <a className="link-footer" href="https://t.me/+4repp4cg_-I0MWRl" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-tele.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://discord.gg/BsjFZwDne6" target="_blank">
+                                    <a className="link-footer" href="https://discord.gg/BsjFZwDne6" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-discord.png" alt="" />
                                     </a>
                                     <a className="link-footer" href="#"  target="_blank">
                                         <img src="/images/i-redit.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw"  target="_blank">
+                                    <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-youtube.png" alt="" />
                                     </a>
                                 </div>
