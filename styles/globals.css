@@ -569,6 +569,7 @@ a {
     text-shadow: 1px 5px black;
     text-align: left;
     white-space: nowrap;
+    max-width: 150px;
 }
 
 .section-roadmap .bot-road .wrap-icon-end {
