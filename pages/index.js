@@ -737,7 +737,7 @@ export default class FullpageWrapper extends React.Component {
                     <div className="container">
                         <div className="wrap-all-community">
                             <div className="one-item">
-                                <a href="https://discord.gg/BsjFZwDne6" target="_blank" rel="noopener noreferrer">
+                                <a href="https://discord.com/invite/F4jHpmHr3x" target="_blank" rel="noopener noreferrer">
                                     <img src="/images/play.png" alt="" />
                                 </a>
                             </div>
@@ -798,7 +798,7 @@ export default class FullpageWrapper extends React.Component {
                                     <a className="link-footer" href="https://t.me/+4repp4cg_-I0MWRl" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-tele.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://discord.gg/BsjFZwDne6" rel="noopener noreferrer" target="_blank">
+                                    <a className="link-footer" href="https://discord.com/invite/F4jHpmHr3x" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-discord.png" alt="" />
                                     </a>
                                     <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" rel="noopener noreferrer" target="_blank">
