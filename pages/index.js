@@ -687,16 +687,6 @@ export default class FullpageWrapper extends React.Component {
                                     <p className="position shadow-custom">CTO</p>
                                 </div>
                                 <div className="team-member">
-                                    <img src="/images/t3.png" alt="" />
-                                    <p className="name shadow-custom">Vu Dinh Hung</p>
-                                    <p className="position shadow-custom">Data Analytics Lead</p>
-                                </div>
-                                <div className="team-member">
-                                    <img src="/images/t4.png" alt="" />
-                                    <p className="name shadow-custom">Pham Thanh Tung</p>
-                                    <p className="position shadow-custom">Backend Developer Lead</p>
-                                </div>
-                                <div className="team-member">
                                     <img src="/images/t5.png" alt="" />
                                     <p className="name shadow-custom">Do Dinh Quang</p>
                                     <p className="position shadow-custom"> Blockchain Developer Lead</p>
