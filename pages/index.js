@@ -523,7 +523,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="vesting-table text-center">Vesting</td>
                                     </tr>
                                     <tr>
-                                        <td className="title-table">Private Sale</td>
+                                        <td className="title-table">Angel Investors</td>
                                         <td>39,500,000</td>
                                         <td>$ 0.025</td>
                                         <td>5%</td>
@@ -532,13 +532,22 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="vesting-table">TGE 6%, 2% at 4th week, 2% at 8th week then vest linear weekly in 12 months</td>
                                     </tr>
                                     <tr>
-                                        <td className="title-table">Public Sale</td>
-                                        <td>47,400,000</td>
-                                        <td>$ 0.040</td>
-                                        <td>6%</td>
-                                        <td>25%</td>
-                                        <td>11,850,000</td>
-                                        <td className="vesting-table">TGE 35%, 1 months cliff, vest linear weekly in 3 months</td>
+                                        <td className="title-table">Fair Launch</td>
+                                        <td>5,000,000</td>
+                                        <td>$ 0.04</td>
+                                        <td>%0.6</td>
+                                        <td>100%</td>
+                                        <td>5,000,000</td>
+                                        <td className="vesting-table">TGE 100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="title-table">Liquidity & Listing</td>
+                                        <td>39,500,000</td>
+                                        <td></td>
+                                        <td>5%</td>
+                                        <td>20%</td>
+                                        <td>7,900,000</td>
+                                        <td className="vesting-table">TGE 20%, 3 months cliff, 10% then 3 months cliff, vest linear in 12 months</td>
                                     </tr>
                                     <tr>
                                         <td className="title-table">Gaming Issuance</td>
@@ -553,19 +562,10 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="title-table">Staking Issuance</td>
                                         <td>150,100,000</td>
                                         <td></td>
-                                        <td>19%</td>
+                                        <td>21%</td>
                                         <td></td>
                                         <td></td>
                                         <td className="vesting-table">6 months cliff, vest follow schedule in 36 months</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="title-table">Liquidity & Listing</td>
-                                        <td>39,500,000</td>
-                                        <td></td>
-                                        <td>5%</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td className="vesting-table">TGE 25%, 3 months cliff, 10% then 3 months cliff, vest linear in 12 months</td>
                                     </tr>
                                     <tr>
                                         <td className="title-table">Advisors & Partners</td>
@@ -598,7 +598,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="title-table">Development Fund</td>
                                         <td>55,300,000</td>
                                         <td></td>
-                                        <td>7%</td>
+                                        <td>8.4%</td>
                                         <td></td>
                                         <td></td>
                                         <td className="vesting-table">12 months cliff, vest  linear weekly in 24 months</td>
@@ -727,28 +727,28 @@ export default class FullpageWrapper extends React.Component {
                     <div className="container">
                         <div className="wrap-all-community">
                             <div className="one-item">
-                                <a href="https://discord.com/invite/F4jHpmHr3x" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/play.png" alt="" />
+                                <a href="https://discord.io/aethrworld" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/discord.png" alt="Discord" />
                                 </a>
                             </div>
                             <div className="one-item">
-                                <a href="https://t.me/+4repp4cg_-I0MWRl" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/tele.png" alt="" />
+                                <a href="https://t.me/aethrworld" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/tele.png" alt="Telegram" />
                                 </a>
                             </div>
                             <div className="one-item">
                                 <a href="https://medium.com/aethr-world/" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/flickr.png" alt="" />
+                                    <img src="/images/flickr.png" alt="Medium" />
                                 </a>
                             </div>
                             <div className="one-item">
                                 <a href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/youtube.png" alt="" />
+                                    <img src="/images/youtube.png" alt="Youtube" />
                                 </a>
                             </div>
                             <div className="one-item">
                                 <a href="https://twitter.com/AethrWorld" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/twitter.png" alt="" />
+                                    <img src="/images/twitter.png" alt="Twitter" />
                                 </a>
                             </div>
                         </div>
@@ -785,10 +785,10 @@ export default class FullpageWrapper extends React.Component {
                                     <a className="link-footer" href="https://twitter.com/AethrWorld" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-twitter.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://t.me/+4repp4cg_-I0MWRl" rel="noopener noreferrer" target="_blank">
+                                    <a className="link-footer" href="https://t.me/aethrworld" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-tele.png" alt="" />
                                     </a>
-                                    <a className="link-footer" href="https://discord.com/invite/F4jHpmHr3x" rel="noopener noreferrer" target="_blank">
+                                    <a className="link-footer" href="https://discord.io/aethrworld" rel="noopener noreferrer" target="_blank">
                                         <img src="/images/i-discord.png" alt="" />
                                     </a>
                                     <a className="link-footer" href="https://www.youtube.com/channel/UCchd1Wc4hj-njQBxeASTHvw" rel="noopener noreferrer" target="_blank">
