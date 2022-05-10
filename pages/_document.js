@@ -11,9 +11,15 @@ class MyDocument extends Document {
       <Html>
         <Head>
             <title>AETHR - Free To Play & Free To Earn NFT Game</title>
-            <meta name="description" content="Free Web tutorials"/>
+            <meta name="description" content="The AETHR World uses blockchain technology and NFTs to empower the players and creators, Free To Earn NFT Game ATH token."/>
             <meta name="keywords" content="AETHR, Free To Play, Free To Earn NFT Game,NFT, Game"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta property="og:site_name" content="AETHR" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" itemprop="name" content="AETHR - Free To Play & Free To Earn NFT Game" />
+            <meta property="og:url" itemprop="url" content="https://aethr.world/" />
+            <meta property="og:description" content="The AETHR World uses blockchain technology and NFTs to empower the players and creators, Free To Earn NFT Game ATH token." />
+
         </Head>
         <body>
           <Main />

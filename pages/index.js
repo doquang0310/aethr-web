@@ -510,7 +510,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="title-table">Total Supply</td>
                                         <td className="title-table">790,000,000</td>
                                         <td className="title-table">Initial Market Cap (Without Liquidity)</td>
-                                        <td className="title-table"></td>
+                                        <td className="title-table">$610,800</td>
                                         <td className="vesting-table title-table"> </td>
                                     </tr>
                                     <tr>
@@ -535,7 +535,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="title-table">Fair Launch</td>
                                         <td>5,000,000</td>
                                         <td>$ 0.04</td>
-                                        <td>%0.6</td>
+                                        <td>0.6%</td>
                                         <td>100%</td>
                                         <td>5,000,000</td>
                                         <td className="vesting-table">TGE 100%</td>
@@ -553,9 +553,9 @@ export default class FullpageWrapper extends React.Component {
                                         <td className="title-table">Gaming Issuance</td>
                                         <td>181,700,000</td>
                                         <td></td>
-                                        <td>23%</td>
                                         <td>25%</td>
-                                        <td>9,875,000</td>
+                                        <td></td>
+                                        <td></td>
                                         <td className="vesting-table">Vest after launching, follow schedule in 36 months</td>
                                     </tr>
                                     <tr>
@@ -592,7 +592,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td>10%</td>
                                         <td>30%</td>
                                         <td>23,700,000</td>
-                                        <td className="vesting-table">TGE 30%, 17,5% each year</td>
+                                        <td className="vesting-table">  01 month cliff,  then unlock 30%, then 1.25% each month</td>
                                     </tr>
                                     <tr>
                                         <td className="title-table">Development Fund</td>
@@ -601,7 +601,7 @@ export default class FullpageWrapper extends React.Component {
                                         <td>8.4%</td>
                                         <td></td>
                                         <td></td>
-                                        <td className="vesting-table">12 months cliff, vest  linear weekly in 24 months</td>
+                                        <td className="vesting-table">03 months cliff, then vest linear monthly in 36 months</td>
                                     </tr>
                                     <tr className="last-row">
                                         <td className="title-table">TOTAL</td>
