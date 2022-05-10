@@ -728,7 +728,7 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-all-community">
                             <div className="one-item">
                                 <a href="https://discord.io/aethrworld" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/i-discord.png" alt="Discord" />
+                                    <img src="/images/discord.png" alt="Discord" />
                                 </a>
                             </div>
                             <div className="one-item">
