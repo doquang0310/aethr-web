@@ -590,8 +590,8 @@ export default class FullpageWrapper extends React.Component {
                                         <td>79,000,000</td>
                                         <td></td>
                                         <td>10%</td>
-                                        <td>30%</td>
-                                        <td>23,700,000</td>
+                                        <td></td>
+                                        <td></td>
                                         <td className="vesting-table">  01 month cliff,  then unlock 30%, then 1.25% each month</td>
                                     </tr>
                                     <tr>
@@ -728,7 +728,7 @@ export default class FullpageWrapper extends React.Component {
                         <div className="wrap-all-community">
                             <div className="one-item">
                                 <a href="https://discord.io/aethrworld" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/discord.png" alt="Discord" />
+                                    <img src="/images/i-discord.png" alt="Discord" />
                                 </a>
                             </div>
                             <div className="one-item">
