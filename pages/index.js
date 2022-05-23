@@ -164,7 +164,7 @@ export default class FullpageWrapper extends React.Component {
                                         <Nav.Link href="#token-allocation" className="item-nav shadow-custom">Token Allocation</Nav.Link>
                                         <Nav.Link href="#team" className="item-nav shadow-custom">Team</Nav.Link>
                                         <Nav.Link href="#roadmap" className="item-nav shadow-custom">Roadmap</Nav.Link>
-                                        <Nav.Link href="https://marketplace.aethr.world" className="item-nav shadow-custom">Marketplace</Nav.Link>
+                                        <Nav.Link href="#" className="item-nav shadow-custom">Marketplace</Nav.Link>
                                         <Nav.Link href="https://docs.aethr.world" className="item-nav shadow-custom">Document</Nav.Link>
                                     </Nav>
                                 </Offcanvas.Body>
